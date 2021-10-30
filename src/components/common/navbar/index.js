@@ -110,7 +110,7 @@ function Index({ setmenu, menu }) {
                 <a href="/barfights">bar fights</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="http://degengangmerch.com">merch</a>
+                <a href="http://degengangmerch.com" target="_blank">merch</a>
               </li>
             </ul>
             <ul className="flex items-center md:ml-6 lg:ml-10 2xl:ml-16 lg:space-x-4 2xl:space-x-9">
@@ -215,7 +215,7 @@ function Index({ setmenu, menu }) {
               <a href="/barfights">BAR FIGHTS</a>
             </li>
             <li className="text-white">
-                <a href="http://degengangmerch.com">MERCH</a>
+              <a href="http://degengangmerch.com">MERCH</a>
             </li>
             {/* <li className="text-white">
               <a href="/#roadmap">faqs</a>
