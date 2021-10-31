@@ -27,7 +27,7 @@ class App extends Component {
     super(props);
     window.web3 = null;
     // modern broswers
-    if (typeof window.ethereum !== 'undefined') {
+      if (typeof window.ethereum !== 'undefined') {
       window.web3 = new Web3(window.ethereum);
       window.web3.eth.net.getId((err, netId) => {
         window.ethereum.request({ method: 'eth_accounts' }).then(async (accounts) => {
