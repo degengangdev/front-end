@@ -3,7 +3,7 @@ import useBlock from './useBlock';
 import { degenGangContract } from '../chain/contracts';
 
 const useTotalSupply = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(7000);
 
   const block = useBlock();
 
