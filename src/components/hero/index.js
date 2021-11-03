@@ -57,10 +57,7 @@ function Index() {
     return () => clearInterval(timer);
   }, [timestamp]);
   return (
-    <div
-      style={{ backgroundImage: `url(images/first.png)` }}
-      className="xl:bg-cover bg-center h-62rem md:pb-20 md:h-full w-full xl:pb-64"
-    >
+    <div className="xl:bg-cover bg-center h-62rem md:pb-20 md:h-full w-full xl:pb-64">
       <Fade bottom>
         <div className="mx-auto container relative z-10 px-4 xl:px-0">
           <Navbar menu={menu} setmenu={setmenu} />
@@ -182,6 +179,7 @@ function Index() {
           </div>
         </div>
       </Fade>
+
     </div>
   );
 }

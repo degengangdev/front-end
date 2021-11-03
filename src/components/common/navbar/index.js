@@ -59,13 +59,13 @@ function Index({ setmenu, menu }) {
 
   return (
     <>
-      <nav className="w-full pt-6 md:pt-8 xl:pt-16">
+      <nav className="w-full pt-6 md:pt-8 xl:pt-8">
         <ul className="flex items-center justify-center lg:justify-between w-full relative">
           <li>
             <Link to="/">
               <img
                 className="w-60 md:w-auto lg:w-40 xl:w-auto"
-                src="images/logo.png"
+                src="images/DEGEN-GANG-LOGO 1.png"
                 alt="logo"
               />
             </Link>
@@ -92,8 +92,8 @@ function Index({ setmenu, menu }) {
               <line x1={4} y1={18} x2={20} y2={18} />
             </svg>
           </button>
-          <li className="text-xs xl:text-base 2xl:text-lg -mt-2 hidden lg:flex items-center md:ml-6 ">
-            <ul className="flex items-center space-x-4 2xl:space-x-6">
+          <li className="text-xs xl:text-small 2xl:text-lg -mt-2 hidden lg:flex items-center md:ml-6 ">
+            <ul className="flex items-center space-x-4 2xl:space-x-6 font-family:Roboto font-normal">
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/#about">about</a>
               </li>
