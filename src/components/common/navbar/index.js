@@ -59,8 +59,8 @@ function Index({ setmenu, menu }) {
 
   return (
     <>
-      <nav className="w-full pt-6 md:pt-8 xl:pt-8">
-        <ul className="flex items-center justify-center lg:justify-between w-full relative">
+      <nav className="w-full pt-6 md:pt-8 xl:pt8">
+        <ul className="flex items-center justify-center lg:justify-around">
           <li>
             <Link to="/">
               <img
@@ -72,7 +72,7 @@ function Index({ setmenu, menu }) {
           </li>
           <button
             onClick={() => setmenu(true)}
-            className="focus:outline-none absolute 2xl:hidden -right-2 md:right-0 text-white"
+            className="focus:outline-none absolute 2xl:hidden lg:hidden -right-2 md:right-0 text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,33 +92,39 @@ function Index({ setmenu, menu }) {
               <line x1={4} y1={18} x2={20} y2={18} />
             </svg>
           </button>
-          <li className="text-xs xl:text-small 2xl:text-lg -mt-2 hidden lg:flex items-center md:ml-6 ">
-            <ul className="flex items-center space-x-4 2xl:space-x-6 font-family:Roboto font-normal">
+          <li className="text-sm xl:text-small 2xl:text-small -mt-2 hidden lg:flex items-center md:ml-6 ">
+            <ul className="flex items-center space-x-4 2xl:space-x-6 font-rob pt-2 ">
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/#about">about</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/#roadmap">roadmap</a>
+                  <a href="/#terms">terms</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/#bar">degen bar</a>
+                <a href="/#dcred">$decred</a>
               </li>
+              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
+                  <a href="/barfights">bar fights</a>
+              </li>
+              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
+                  <a href="/#beasts">beasts</a>
+              </li>
+              {/*<li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">*/}
+              {/*  <a href="/#bar">degen bar</a>*/}
+              {/*</li>*/}
               {/* <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/#fight">BAR FIGHTS</a>
               </li> */}
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/barfights">bar fights</a>
-              </li>
-              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="http://degengangmerch.com" target="_blank" rel="noreferrer">merch</a>
               </li>
             </ul>
-            <ul className="flex items-center md:ml-6 lg:ml-10 2xl:ml-16 lg:space-x-4 2xl:space-x-9">
+            <ul className="flex items-center md:ml-6 lg:ml-10 2xl:ml-16 lg:space-x-4 2xl:space-x-9 pt-2">
               <li className="text-white hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="https://twitter.com/Degenganghq">
                   <svg
-                    width={42}
-                    height={35}
+                    width={24}
+                    height={24}
                     viewBox="0 0 64 64"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +139,8 @@ function Index({ setmenu, menu }) {
               <li className="text-white hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="http://discord.gg/VyxVr4byxH">
                   <svg
-                    width={42}
-                    height={35}
+                    width={24}
+                    height={24}
                     viewBox="0 0 64 49"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +164,7 @@ function Index({ setmenu, menu }) {
               ) : (
                 <li>
                   <a href="https://opensea.io/collection/degengang" target="__blank">
-                    <Button title="OPENSEA" />
+                    <Button title="CONNECT" />
                   </a>
                 </li>
               )}

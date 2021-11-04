@@ -8,12 +8,13 @@ module.exports = {
         "246px": "246px",
       },
       colors: {
+        purpleBrand: "#F12C92",
         yellowBrand: "#ffff00",
         magenta: "#ff00ff",
         skyBlue: "#00ffff",
       },
       boxShadow: {
-        btn: "6px 6px #00ffff",
+          btn: "2px 2px #EBF759",
       },
       fontSize: {
         54: "54px",
@@ -24,7 +25,10 @@ module.exports = {
       height: {
         "62rem": "62rem",
         "30rem": "30rem",
-      },
+        },
+      fontFamily: {
+          rob: ["roboto", "plateia"],
+      }
     },
   },
   variants: {

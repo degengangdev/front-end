@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\public",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\common",
+    "\\src\\components\\common\\navbar",
+    "\\src\\components\\hero",
+    "\\src\\font",
+    "\\src\\pages"
   ],
+  "SelectedNode": "\\src\\font",
   "PreviewInSolutionExplorer": false
 }

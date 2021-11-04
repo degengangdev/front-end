@@ -7,6 +7,11 @@
   src: url(./font/Plateia\ Bold.ttf);
 }
 
+@font-face {
+    font-family: roboto;
+    src: url(./font/Roboto/Roboto-Light.ttf);
+}
+
 *,
 html {
   scroll-behavior: smooth;
