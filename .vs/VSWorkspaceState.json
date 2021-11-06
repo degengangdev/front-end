@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\public",
+    "\\public\\images",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\common",
-    "\\src\\components\\common\\navbar",
-    "\\src\\components\\hero",
-    "\\src\\font",
-    "\\src\\pages"
+    "\\src\\components\\BarFightPage",
+    "\\src\\components\\BarFightPage\\hero",
+    "\\src\\components\\degenBar",
+    "\\src\\components\\heroDcred",
+    "\\src\\components\\join"
   ],
-  "SelectedNode": "\\src\\font",
+  "SelectedNode": "\\src\\components\\heroDcred\\index.js",
   "PreviewInSolutionExplorer": false
 }
