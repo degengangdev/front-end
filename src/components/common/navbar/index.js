@@ -98,25 +98,16 @@ function Index({ setmenu, menu }) {
                 <a href="/#about">about</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                  <a href="/#terms">terms</a>
-              </li>
-              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/#dcred">$decred</a>
+                <a href="/dcred">$decred</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                   <a href="/barfights">bar fights</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                  <a href="/#beasts">beasts</a>
-              </li>
-              {/*<li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">*/}
-              {/*  <a href="/#bar">degen bar</a>*/}
-              {/*</li>*/}
-              {/* <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/#fight">BAR FIGHTS</a>
-              </li> */}
-              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="http://degengangmerch.com" target="_blank" rel="noreferrer">merch</a>
+              </li>
+              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
+                  <a href="/beasts">beasts</a>
               </li>
             </ul>
             <ul className="flex items-center md:ml-6 lg:ml-10 2xl:ml-16 lg:space-x-4 2xl:space-x-9 pt-2">

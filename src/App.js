@@ -8,6 +8,8 @@ import {
 import Degen from "./pages/degen";
 import ComingSoon from "./pages/comingSoon";
 import Barfight from "./pages/barFight";
+import DcredPage from "./pages/dcredPage";
+import BeastsPage from "./pages/beastsPage";
 
 import {
   setAddress,
@@ -127,8 +129,10 @@ class App extends Component {
         <Router>
           <Switch>
             <Route path="/" component={Degen} exact />
-            <Route path="/mint" component={ComingSoon} exact />
+            <Route path="/dcred" component={DcredPage} exact />
             <Route path="/barfights" component={Barfight} exact />
+                    <Route path="/beasts" component={BeastsPage} exact />
+            <Route path="/soon" component={ComingSoon} exact />
           </Switch>
         </Router>
         <NotificationContainer />
