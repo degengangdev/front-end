@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/common/navbar";
 import HeroDcred from "../components/heroDcred";
 import HeroStreetCred from "../components/heroStreetCred";
+import HeroUsingDCred from "../components/heroUsingDecred";
 
 export default function DcredPage() {
     const [menu, setmenu] = useState(false);
@@ -12,6 +13,7 @@ export default function DcredPage() {
             <Navbar menu={menu} setmenu={setmenu} />
             <HeroDcred />
             <HeroStreetCred />
+            <HeroUsingDCred />
             <Join />
             <Footer />
         </>
