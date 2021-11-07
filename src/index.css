@@ -12,6 +12,16 @@
     src: url(./font/Roboto/Roboto-Light.ttf);
 }
 
+@font-face {
+    font-family: robotomono;
+    src: url(./font/RobotoMono/static/RobotoMono-Light.ttf);
+}
+
+@font-face {
+    font-family: wraith;
+    src: url(./font/Wraith.otf);
+}
+
 *,
 html {
   scroll-behavior: smooth;
@@ -47,7 +57,13 @@ input::-webkit-inner-spin-button {
 
 .f-f-r {
   font-family: "Roboto Mono", monospace;
+  font-size: 15px;
 }
+.dcredbox {
+    width: 533px;
+    height: 434px;
+}
+
 .max-h-none {
   max-height: 0px;
   animation-name: closeIt;

@@ -9,8 +9,9 @@
     "\\src\\components\\BarFightPage\\hero",
     "\\src\\components\\degenBar",
     "\\src\\components\\heroDcred",
-    "\\src\\components\\join"
+    "\\src\\components\\join",
+    "\\src\\font"
   ],
-  "SelectedNode": "\\src\\components\\heroDcred\\index.js",
+  "SelectedNode": "\\src\\components\\join\\index.js",
   "PreviewInSolutionExplorer": false
 }

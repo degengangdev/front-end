@@ -28,6 +28,8 @@ module.exports = {
         },
       fontFamily: {
           rob: ["roboto", "plateia"],
+          robmono: ["robotomono", "roboto", "plateia"],
+          wraith: ["wraith", "plateia"]
       }
     },
   },
