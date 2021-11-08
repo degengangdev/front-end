@@ -5,7 +5,7 @@ function Index() {
         <div>
             <div
             style={{ backgroundImage: `url(images/degenstreetcred.png)` }}
-                className="bg-cover bg-center h-full w-full py-24 md:py-32 lg:py-40 xl:py-40 z-10">
+                className="bg-cover bg-center h-full w-full py-20 md:py-20 lg:py-20 xl:py-20 z-10">
                 <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-8 text-white f-f-r">
                     <p className="font-wraith text-2xl">DEGEN STREET CRED</p>
                     <p className="font-wraith text-2xl">$DCRED</p>

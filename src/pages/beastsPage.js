@@ -8,7 +8,7 @@ export default function BeastsPage() {
     return (
         <>
             <Navbar menu={menu} setmenu={setmenu} />
-            <h1 class="text-white">Beasts Page</h1>
+            <h1 className="text-white">Beasts Page</h1>
             <Join />
             <Footer />
         </>

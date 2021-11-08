@@ -15,7 +15,7 @@ export default function DcredPage() {
             <HeroStreetCred />
             <HeroUsingDCred />
             <Join />
-            <Footer />
+            <Navbar menu={menu} setmenu={setmenu} showConnect="false" />
         </>
     );
 }

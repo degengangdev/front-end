@@ -7,8 +7,8 @@ function Index() {
             <div
             style={{ backgroundImage: `url(images/dcredbackground.png)` }}
             className="bg-cover bg-center h-full w-full py-24 md:py-32 lg:py-40 xl:py-40 z-10">
-                <div class="flow-root text-white">
-                    <div class="float-right mr-48 dcredbox border-2 border-purpleBrand bg-black pt-4">
+                <div className="flow-root text-white">
+                    <div className="float-right mr-48 dcredbox border-2 border-purpleBrand bg-black pt-4">
                         <div className="flex flex-col items-center justify-center mx-auto container f-f-r p-1 pb-8">
                             <span className="font-wraith">What is $Dcred?</span>
                             <span className="mt-12">Degen Street Cred, $DCRED, is our governance</span>
