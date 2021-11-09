@@ -6,12 +6,12 @@ function Index() {
         <div>
             <div
             style={{ backgroundImage: `url(images/dcredbackground.png)` }}
-            className="bg-cover bg-center h-full w-full py-24 md:py-32 lg:py-40 xl:py-40 z-10 mb-16">
+            className="bg-cover bg-center h-full w-full py-24 md:py-20 lg:py-30 xl:py-40 z-10 mb-8">
                 <div className="flow-root text-white">
-                    <div className="float-right mr-48 dcredbox border-2 border-purpleBrand bg-black pt-4">
+                    <div className="float-right xl:mr-64 lg:mr-8 md:mr-20 lg:w-1/2 xl:w-1/4 border-2 border-purpleBrand bg-black pt-4 ">
                         <div className="flex flex-col items-center justify-center mx-auto container font-robmono p-1 pb-8">
                             <span className="font-wraith">What is $Dcred?</span>
-                            <span className="mt-12">Degen Street Cred, $DCRED, is our governance</span>
+                            <span className="mt-6 xl:mt-12">Degen Street Cred, $DCRED, is our governance</span>
                             <p>token that will give degens the power to</p>
                             <p className="mt-2">influence decisions and decide how the</p>
                             <p className="mt-2">ecosystem should further develop.</p>
