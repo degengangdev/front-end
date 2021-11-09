@@ -23,7 +23,7 @@ function Index() {
                             <img
                                 alt=""
                                 className="sm:w-32 lg:h-32 lg:w-32"
-                                src="images/breed.png"
+                                src="images/Breed.png"
                             />
                         </div>
                         <div className="md:col-span-3">
@@ -34,7 +34,7 @@ function Index() {
                             <img
                                 alt=""
                                 className="sm:w-32 xl:h-32 xl:w-32"
-                                src="images/governance.png"
+                                src="images/Governance.png"
                             />
                         </div>
                         <div className="md:col-span-3">
