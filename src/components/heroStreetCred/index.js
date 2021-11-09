@@ -14,7 +14,7 @@ function Index() {
                     <img
                         alt=""
                         className="pt-36"
-                        src="images/degenganglogocircle.png"
+                        src="images/DegenGangLogoCircle.png"
                     />
 
                 </div>
