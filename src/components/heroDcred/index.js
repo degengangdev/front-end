@@ -6,9 +6,9 @@ function Index() {
         <div>
             <div
                 style={{ backgroundImage: `url(images/DcredBackground.png)` }}
-            className="bg-cover bg-center h-full w-full py-8 md:py-10 lg:py-30 xl:py-40 z-10 mb-8">
+            className="bg-cover bg-center h-full w-full py-8 md:py-10 lg:py-30 xl:py-40 z-10 mb-8 pl-2">
                 <div className="flow-root text-white">
-                    <div className="ml-4 md:float-right xl:mr-64 lg:mr-8 md:mr-20 md:w-1/2 lg:w-1/2 xl:w-1/3 2xl:w-1/3 border-2 border-purpleBrand lg:bg-black pt-4 md:max-w-screen-sm mr-4 ">
+                    <div className="ml-4 md:float-right xl:mr-64 lg:mr-8 md:mr-20 md:w-1/2 lg:w-1/2 xl:w-1/3 2xl:w-1/3 border-2 border-purpleBrand md:bg-black pt-4 md:max-w-screen-sm mr-4 ">
                         <div className="flex flex-col items-center justify-center mx-auto container font-robmono p-1 pb-8 pl-4 pr-4 pt-2 text-sm md:text-lg ">
                             <span className="font-wraith">What is $Dcred?</span>
                             <span className="mt-6 xl:mt-12">Degen Street Cred, $DCRED, is our governance token that will give degens the power to</span>
