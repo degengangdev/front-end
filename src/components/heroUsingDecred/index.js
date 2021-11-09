@@ -16,7 +16,7 @@ function Index() {
                             />
                         </div>
                         <div className="float-left ml-16  w-2/5 h-16">
-                            <div className="text-2xl">Name your Degen on the blockchain.</div>
+                            <div className="text-2xl font-bold">Name your Degen on the blockchain.</div>
                             <div className="mt-8">Congratulations. You’re now a true degen. Time to let the rest of the world know. 300 $DCRED to make it permanent on the blockchain and 300 $DCRED to tell them your story and write a lore. </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ function Index() {
                             />
                         </div>
                         <div className="float-left ml-16 w-2/5 h-16">
-                            <div className="text-2xl">Breed a New Degen...</div>
+                            <div className="text-2xl  font-bold">Breed a New Degen...</div>
                             <div className="mt-8">There’s rumours of evil scientists selling beasts in the degen labs. It will cost you 1000 $DCRED and you may not like what you find...Activate Beast Mode?</div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ function Index() {
                             />
                         </div>
                         <div className="float-left ml-16 w-2/5 h-16">
-                            <div className="text-2xl">Governance</div>
+                            <div className="text-2xl  font-bold">Governance</div>
                             <div className="mt-8">Vote on matters of importance to Degen Gang and help shape the future of the ecosystem. </div>
                         </div>
                     </div>

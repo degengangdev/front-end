@@ -2,16 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\images",
     "\\src",
     "\\src\\components",
     "\\src\\components\\BarFightPage",
-    "\\src\\components\\BarFightPage\\hero",
-    "\\src\\components\\degenBar",
-    "\\src\\components\\heroDcred",
-    "\\src\\components\\join",
-    "\\src\\font"
+    "\\src\\components\\BarFightPage\\games",
+    "\\src\\components\\common",
+    "\\src\\components\\common\\navbar",
+    "\\src\\components\\heroStreetCred",
+    "\\src\\components\\heroUsingDecred"
   ],
-  "SelectedNode": "\\src\\components\\join\\index.js",
+  "SelectedNode": "\\src\\components\\common\\navbar\\index.js",
   "PreviewInSolutionExplorer": false
 }
