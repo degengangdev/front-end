@@ -12,7 +12,7 @@ function Index() {
                             <img
                                 alt=""
                                 className="sm:w-32 lg:h-32 lg:w-32"
-                                src="images/nameyourdegen.png"
+                                src="images/NameYourDegen.png"
                             />
                         </div>
                         <div className="md:col-span-3">
