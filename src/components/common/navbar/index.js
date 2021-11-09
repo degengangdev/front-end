@@ -64,7 +64,7 @@ function Index({ setmenu, menu }) {
           <li>
             <Link to="/">
               <img
-                className="w-60 md:w-auto lg:w-40 xl:w-auto"
+                className="w-44 md:w-auto lg:w-40 xl:w-auto"
                 src="images/DEGEN-GANG-LOGO 1.png"
                 alt="logo"
               />
@@ -72,7 +72,7 @@ function Index({ setmenu, menu }) {
           </li>
           <button
             onClick={() => setmenu(true)}
-            className="focus:outline-none absolute 2xl:hidden lg:hidden -right-2 md:right-0 text-white"
+            className="focus:outline-none absolute 2xl:hidden lg:hidden -right-2 md:right-0 text-white pr-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -200,19 +200,19 @@ function Index({ setmenu, menu }) {
           </div>
           <ul className="flex flex-col text-xs pl-8 space-y-4 f-f-r uppercase">
             <li className="text-white transition duration-150 ease-in ">
-              <a href="/#home">about</a>
+                <a href="/#home">about</a>
             </li>
             <li className="text-white">
-              <a href="/#roadmap">roadmap</a>
+                <a href="/dcred">$decred</a>
             </li>
             <li className="text-white">
-              <a href="/#features">degen bar</a>
+                <a href="/barfights">BAR FIGHTS</a>
             </li>
             <li className="text-white">
-              <a href="/barfights">BAR FIGHTS</a>
+                <a href="http://degengangmerch.com">MERCH</a>
             </li>
             <li className="text-white">
-              <a href="http://degengangmerch.com">MERCH</a>
+                <a href="/beasts">Beasts</a>
             </li>
             {/* <li className="text-white">
               <a href="/#roadmap">faqs</a>

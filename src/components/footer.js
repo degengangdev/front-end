@@ -64,34 +64,12 @@ function Index({ setmenu, menu }) {
                     <li>
                         <Link to="/">
                             <img
-                                className="w-60 md:w-auto lg:w-40 xl:w-auto"
+                                className="w-44 md:w-auto lg:w-40 xl:w-auto"
                                 src="images/DEGEN-GANG-LOGO 1.png"
                                 alt="logo"
                             />
                         </Link>
                     </li>
-                    <button
-                        onClick={() => setmenu(true)}
-                        className="focus:outline-none absolute 2xl:hidden lg:hidden -right-2 md:right-0 text-white"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className=" icon icon-tabler icon-tabler-menu-2"
-                            width={40}
-                            height={40}
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <line x1={4} y1={6} x2={20} y2={6} />
-                            <line x1={4} y1={12} x2={20} y2={12} />
-                            <line x1={4} y1={18} x2={20} y2={18} />
-                        </svg>
-                    </button>
                     <li className="text-sm xl:text-small 2xl:text-small -mt-2 hidden lg:flex items-center md:ml-6 ">
                         <ul className="flex items-center space-x-4 2xl:space-x-6 font-rob pt-2 ">
                             <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
@@ -187,10 +165,7 @@ function Index({ setmenu, menu }) {
                             <a href="/#home">about</a>
                         </li>
                         <li className="text-white">
-                            <a href="/#roadmap">roadmap</a>
-                        </li>
-                        <li className="text-white">
-                            <a href="/#features">degen bar</a>
+                            <a href="/decred">$decred</a>
                         </li>
                         <li className="text-white">
                             <a href="/barfights">BAR FIGHTS</a>
@@ -198,7 +173,10 @@ function Index({ setmenu, menu }) {
                         <li className="text-white">
                             <a href="http://degengangmerch.com">MERCH</a>
                         </li>
-                        {/* <li className="text-white">
+                        <li className="text-white">
+                            <a href="/beasts">Beasts</a>
+                        </li>
+                       {/* <li className="text-white">
               <a href="/#roadmap">faqs</a>
             </li> */}
                         <li className="text-white flex items-center space-x-4">
