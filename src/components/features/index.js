@@ -8,38 +8,108 @@ function Index() {
       <div
         id="about"
         style={{ backgroundImage: `url(images/KeyFeatures.png)` }}
-        className="bg-cover bg-center h-full w-full py-16 md:py-24 xl:py-32"
+        className="bg-cover bg-center h-full w-full py-16 md:py-24 xl:py-32 mb-4 mt-4"
           >
-              <h1 className="text-white text-large">Features</h1>
-
               <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-8 text-white f-f-r">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:place-items-end pl-8 max-w-screen-lg ">
-                      <div>
+                  <p className="text-white text-large font-wraith text-2xl">KEY FEATURES</p>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-0  max-w-screen-lg ">
+                      <div >
                           <img
-                              className="lg:w-2/5 lg:pr-5 xl:w-4/5 xl:pr-10"
-                              src="/images/DEGEN-GANG-LOGO 1.png"
                               alt=""
+                              className=""
+                              src="images/FeaturesDegenBar.png"
                           />
-                          <p className="text-white mt-8">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                          <p className="ml-16 mr-16 -mt-16">
+                              OG Degens. These Degens were here from the start and are the only ones that can
+                              generate 10 $DCRED a day.
+
+                              $DCRED can be used to name a Degen, write a lore for them, or even breed a beast...
                           </p>
-                          <p className="text-white mt-8">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                          </p>
-                          <p className="mt-8">
-                              <a href="http://bbc.co.uk" target="__blank">
-                                  <Button title="Litepaper" />
-                              </a>
-                          </p>
-                     </div>
-                      <div>
+                      </div>
+                      <div >
                           <img
-                              className="lg:w-2/5 lg:pr-5 xl:w-11/12 xl:pr-10 pb-24"
-                              src="/images/FeatureCharacter.png"
                               alt=""
+                              className=""
+                              src="images/FeaturesRewards.png"
                           />
-                     </div>
+                          <p className="ml-16 mr-16 -mt-16">
+                              Pixel Degens lurk on the
+                              Immutable X platform and like to fuck shit up in the bar.
+
+                              These angry degens can be used in BAR FIGHTS to earn you $DEGEN for taking names and kicking ass.
+                          </p>
+                      </div>
+                      <div >
+                          <img
+                              alt=""
+                              className=""
+                              src="images/FeaturesBarFights.png"
+                          />
+                          <p className="ml-16 mr-16 -mt-16">
+                              A science experiment that went horribly wrong and now we have beasts to contend with...
+
+                              There is still much to learn of these creatures and their powers.
+
+
+                          </p>
+                      </div>
                   </div>
+                  <p className="text-white text-large font-wraith text-2xl mt-16">PARTNERS</p>
+                  <img
+                      className="w-1/4 xl:pr-10 mt-16"
+                      src="/images/NetVrkLogo.png"
+                      alt=""
+                  />
+                  <p className="text-white text-large font-wraith text-2xl mt-16">Team</p>
+                  <div className="max-w-screen-md pt-16">
+                      <p className="ml-16 mr-16 text-align-center">
+                          The team is anonymous, however, have a combined experience of over 30 years in blockchain.
+                      </p>
+                      <p className="ml-16 mr-16 text-align-center">
+                          With extensive backgrounds in marketing, business strategy, tech, finance and the art
+                          sectors, Degen Gang is poised to become a potential leader on the charge into the NFT P2E gaming space.
+                          There is still much to learn of these creatures and their powers.
+                      </p>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-5 gap-2  max-w-screen-lg pt-24">
+                      <div >
+                          <img
+                              alt=""
+                              className=""
+                              src="images/OverlordDegen.png"
+                          />
+                      </div>
+                      <div >
+                          <img
+                              alt=""
+                              className=""
+                              src="images/DrDegen.png"
+                          />
+                      </div>
+                      <div >
+                          <img
+                              alt=""
+                              className=""
+                              src="images/FrugLife.png"
+                          />
+                      </div>
+                      <div >
+                          <img
+                              alt=""
+                              className=""
+                              src="images/SkeletonPrince.png"
+                          />
+                      </div>
+                      <div >
+                          <img
+                              alt=""
+                              className=""
+                              src="images/WinnDix.png"
+                          />
+                      </div>
+                </div>
+
               </div>
       </div>
     </Fade>

@@ -3,7 +3,7 @@ import React from "react";
 function Index() {
     return (
         <div style={{ backgroundImage: `url(images/brand-colour-1.png)` }}>
-            <div className="h-auto w-full py-6 z-10 -mt-16" >
+            <div className="h-auto w-full py-6 z-10 -mt-12" >
                 <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-1 text-white f-f-r">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-0  max-w-screen-lg ">
                         <div >
