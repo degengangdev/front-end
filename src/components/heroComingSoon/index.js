@@ -142,7 +142,6 @@ export default function Index() {
       style={{ backgroundImage: `url(images/first.png)` }}
       className="xl:bg-cover bg-center  md:pb-20 h-full w-full xl:pb-64"
     >
-      <Fade bottom>
         <div className="mx-auto container flex flex-col items-center justify-center px-4 xl:px-0 relative z-50">
           <Navbar menu={menu} setmenu={setmenu} />
           {
@@ -202,7 +201,6 @@ export default function Index() {
             <img className="z-0 lg:w-1/2  " src="images/mint.png" alt="" />
           </div>
         </div>
-      </Fade>
     </div>
   );
 }

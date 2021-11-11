@@ -3,7 +3,6 @@ import Button from "../common/button";
 import Fade from "react-reveal/Fade";
 function Index() {
   return (
-    <Fade bottom>
       <div id="bar" className="bg-black py-10 md:py-14 lg:py-24 ">
         <div className="mx-auto container flex flex-col items-center justify-center px-4 xl:px-0">
           <div className="xl:w-7/12 2xl:w-3/5">
@@ -37,7 +36,6 @@ function Index() {
           </a>
         </div>
       </div>
-    </Fade>
   );
 }
 

@@ -165,7 +165,7 @@ function Index({ setmenu, menu }) {
                             <a href="/#home">about</a>
                         </li>
                         <li className="text-white">
-                            <a href="/decred">$decred</a>
+                            <a href="/decred">$dcred</a>
                         </li>
                         <li className="text-white">
                             <a href="/barfights">BAR FIGHTS</a>

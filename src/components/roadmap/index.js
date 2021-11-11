@@ -4,9 +4,8 @@ import Button from "../common/button";
 
 function Index() {
     return (
-        <Fade bottom>
             <div
-                id="about"
+                id="roadmap"
                 style={{ backgroundImage: `url(images/RoadmapBackground.png)` }}
                 className="bg-cover bg-center h-full w-full py-16 md:py-24 xl:py-32"
             >
@@ -94,7 +93,6 @@ function Index() {
                     </div>
                 </div>
             </div>
-        </Fade>
     );
 }
 

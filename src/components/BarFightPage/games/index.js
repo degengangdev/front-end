@@ -1,8 +1,6 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
 function Index() {
   return (
-    <Fade bottom>
       <div
         id="frens"
         style={{ backgroundImage: `url(images/third.png)` }}
@@ -25,7 +23,7 @@ function Index() {
             <img
               alt=""
               className="mt-10 lg:mt-0  sm:w-1/2 lg:w-5/12"
-              src="images/barfight1.png"
+              src="images/BarFightsCover.png"
             />
           </div>
           <div className="lg:flex-row flex flex-col flex-col-reverse items-center justify-between lg:space-x-5 xl:space-x-10 w-11/12 mt-28">
@@ -88,7 +86,6 @@ function Index() {
           </div>
         </div>
       </div>
-    </Fade>
   );
 }
 

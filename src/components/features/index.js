@@ -4,9 +4,8 @@ import Button from "../common/button";
 
 function Index() {
   return (
-    <Fade bottom>
       <div
-        id="about"
+        id="keyfeatures"
         style={{ backgroundImage: `url(images/KeyFeatures.png)` }}
         className="bg-cover bg-center h-full w-full py-16 md:py-24 xl:py-32 mb-4 mt-4"
           >
@@ -61,11 +60,11 @@ function Index() {
                       alt=""
                   />
                   <p className="text-white text-large font-wraith text-2xl mt-16">Team</p>
-                  <div className="max-w-screen-md pt-16">
-                      <p className="ml-16 mr-16 text-align-center">
+                  <div className="max-w-screen-md pt-16 text-center">
+                      <p className="ml-16 mr-16">
                           The team is anonymous, however, have a combined experience of over 30 years in blockchain.
                       </p>
-                      <p className="ml-16 mr-16 text-align-center">
+                  <p className="ml-16 mr-16 text-center mt-8">
                           With extensive backgrounds in marketing, business strategy, tech, finance and the art
                           sectors, Degen Gang is poised to become a potential leader on the charge into the NFT P2E gaming space.
                           There is still much to learn of these creatures and their powers.
@@ -112,7 +111,6 @@ function Index() {
 
               </div>
       </div>
-    </Fade>
   );
 }
 

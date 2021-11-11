@@ -2,7 +2,6 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 function Index() {
   return (
-    <Fade bottom>
       <div
         id="frens"
         style={{ backgroundImage: `url(images/third.png)` }}
@@ -70,7 +69,6 @@ function Index() {
           </div>
         </div>
       </div>
-    </Fade>
   );
 }
 

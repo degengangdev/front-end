@@ -7,10 +7,9 @@ function Index() {
 
   return (
     <div
-      style={{ backgroundImage: `url(images/first.png)` }}
+      style={{ backgroundImage: `url(images/BarFightsBackground.png)` }}
       className="xl:bg-cover bg-center pb-10 md:pb-20 md:h-full w-full "
     >
-      <Fade bottom>
         <div className="mx-auto container relative z-10 px-4 xl:px-0">
           <Navbar menu={menu} setmenu={setmenu} />
           <div className="flex flex-col justify-center items-center pt-14  w-full h-full">
@@ -24,21 +23,10 @@ function Index() {
                 <p className="text-white text-2xl md:text-28 py-8  text-center ">
                   The First Virtual Fight Club for Web 3.0
                 </p>
-                <p className="text-white text-xl f-f-r text-center ">
-                  "When you can earn more in a virtual bar fight with a degen
-                  dead frog than you can in your day job you should probably get
-                  involved."
-                </p>
-                <br />
-                <p className="text-white text-xl f-f-r text-center ">
-                The first rule of fight club is to tell everyone you know about fight club.
-
-                </p>
               </div>
             </div>
           </div>
         </div>
-      </Fade>
     </div>
   );
 }
