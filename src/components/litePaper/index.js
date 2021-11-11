@@ -7,11 +7,9 @@ function Index() {
     <Fade bottom>
       <div
         id="about"
-        style={{ backgroundImage: `url(images/KeyFeatures.png)` }}
+        style={{ backgroundImage: `url(images/LitePaperBackground.png)` }}
         className="bg-cover bg-center h-full w-full py-16 md:py-24 xl:py-32"
           >
-              <h1 className="text-white text-large">Features</h1>
-
               <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-8 text-white f-f-r">
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:place-items-end pl-8 max-w-screen-lg ">
                       <div>

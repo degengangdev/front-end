@@ -1,24 +1,22 @@
 import React from "react";
 import Hero from "../components/hero/index";
 import Features from "../components/features";
-import MemberShip from "../components/membership";
-import DegenBar from "../components/degenBar";
-import Faqs from "../components/faqs";
 import Join from "../components/join";
 import Footer from "../components/footer";
-import Roadmap from "../components/roadmap";
-import BarFight from "../components/barFight";
+import SoldOut from "../components/soldOut";
+import DegenTypes from "../components/degenTypes";
+import LitePaper from "../components/litePaper";
+import RoadMap from "../components/roadmap";
 
 export default function Degen() {
   return (
     <>
       <Hero />
+      <SoldOut />
+      <LitePaper />
+      <DegenTypes />
+      <RoadMap />
       <Features />
-      <MemberShip />
-      <Roadmap />
-      <DegenBar />
-      <BarFight />
-      <Faqs />
       <Join />
       <Footer />
     </>
