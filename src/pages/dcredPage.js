@@ -10,7 +10,6 @@ export default function DcredPage() {
     const [menu, setmenu] = useState(false);
     return (
         <>
-            <Navbar menu={menu} setmenu={setmenu} />
             <HeroDcred />
             <HeroStreetCred />
             <HeroUsingDCred />
