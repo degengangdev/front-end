@@ -10,7 +10,7 @@ function Index() {
             <div className="w-full md:w-10/12 lg:w-9/12 xl:w-2/3">
               <div className="flex flex-col justify-center items-center">
                 <img
-                  className="w-8/12"
+                  className="w-1/2 md-3/4"
                   src="images/BARFIGHTS-TrasparentBKG.png"
                   alt="main"
                 />
