@@ -55,7 +55,7 @@ function Index() {
                   </div>
                   <p className="text-white text-large font-wraith text-2xl mt-16">PARTNERS</p>
                   <img
-                      className="w-1/4 xl:pr-10 mt-16"
+                      className="w-1/2 md:w-1/4 xl:pr-10 mt-16"
                       src="/images/NetVrkLogo.png"
                       alt=""
                   />

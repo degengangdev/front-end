@@ -6,7 +6,7 @@ function Index() {
             <div className="h-auto w-full py-6 z-10 mb-8">
                 <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-1 text-white f-f-r">
                     <div class="grid grid-cols-1 md:grid-cols-8 gap-0 md:place-items-end pl-8 max-w-screen-lg ">
-                        <div>
+                        <div className="hidden md:block">
                             <img
                                 alt=""
                                 className=""
@@ -34,7 +34,7 @@ function Index() {
                                 src="images/SoldOutRightTwo.png"
                             />
                         </div>
-                        <div>
+                        <div className="hidden md:block">
                             <img
                                 alt=""
                                 className="-ml-8"

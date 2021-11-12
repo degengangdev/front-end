@@ -25,6 +25,14 @@ module.exports = {
       height: {
         "62rem": "62rem",
         "30rem": "30rem",
+          },
+        minWidth: {
+            '0': '0',
+            '1/4': '25%',
+            '1/2': '50%',
+            '3/4': '75%',
+            'full': '100%',
+            "btn": "6rem",
         },
       fontFamily: {
           rob: ["roboto", "plateia"],

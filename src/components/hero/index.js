@@ -58,12 +58,12 @@ function Index() {
   }, [timestamp]);
   return (
       <div className="bg-cover bg-center " style={{ backgroundImage: `url(images/DegenGangHomeTop.png)` }}>
-          <div className="mx-auto container relative z-10 pt-16 md:pt-32 lg:pt-48 xl:pt-64 ">
+          <div className="mx-auto container relative z-10 pt-16 md:pt-32 lg:pt-48 xl:pt-36 ">
               <div className="flex flex-col items-center justify-center mx-auto container text-white f-f-r pl-4 pr-4 max-w-screen-sm">
-                <img className="pt-16 md:pt-0" src="images/DegenLargePinkLogo.png" alt="img" /><br />
+                  <img className="pt-16 md:pt-0 w-2/3 md:w-full " src="images/DegenLargePinkLogo.png" alt="img" /><br />
                 <p className="pt-12 text-center">The biggest bunch of degenerates on the blockchain. 7,000 strong and ready to take over.</p>
-                <a className="mt-12 mb-12" href="http://discord.gg/VyxVr4byxH" target="__blank">
-                    <Button title="LFG" />
+                <a className="mt-12 mb-12 " href="http://discord.gg/VyxVr4byxH" target="__blank">
+                      <Button title="LFG" className="w-3/4" />
                 </a>
             </div>
         </div>
