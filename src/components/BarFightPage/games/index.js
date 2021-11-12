@@ -14,7 +14,7 @@ function Index() {
               className="mt-10 lg:mt-0  sm:w-1/2 lg:w-5/12"
               src="images/BarFightsCover.png"
             />
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 pt-16 lg:pt-0">
                 <p className="text-white text-base md:text-lg text-center lg:text-left f-f-r">
                     Bar Fights is a first of its kind arcade NFT game, where you can use your Pixel Degen NFT to fight others and earn $DEGEN! Play-to-Earn!
                 </p>

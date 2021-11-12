@@ -26,12 +26,18 @@ module.exports = {
         "62rem": "62rem",
         "30rem": "30rem",
           },
+      width: {
+        "20rem": "20rem",
+        "30rem": "30rem",
+      },
         minWidth: {
             '0': '0',
             '1/4': '25%',
             '1/2': '50%',
             '3/4': '75%',
             'full': '100%',
+            "150pct": "200%",
+            "200pct": "200%",
             "btn": "6rem",
         },
       fontFamily: {
