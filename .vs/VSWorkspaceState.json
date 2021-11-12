@@ -1,16 +1,17 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\public\\images",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\heroDcred",
-    "\\src\\components\\heroStreetCred",
-    "\\src\\components\\heroUsingDecred",
-    "\\src\\components\\join",
-    "\\src\\pages"
+    "\\src\\components\\BarFightPage",
+    "\\src\\components\\BarFightPage\\games",
+    "\\src\\components\\common",
+    "\\src\\components\\common\\navbar",
+    "\\src\\components\\degenBar",
+    "\\src\\components\\degenDollas",
+    "\\src\\components\\hero",
+    "\\src\\components\\pixelDegen"
   ],
-  "SelectedNode": "\\public\\images\\DegenGangLogoCircle.png",
+  "SelectedNode": "\\src\\components\\common\\navbar\\index.js",
   "PreviewInSolutionExplorer": false
 }
