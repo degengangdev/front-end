@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "../common/button";
-import Navbar from "../common/navbar";
 
 function Index() {
     const [menu, setmenu] = useState(false);
@@ -10,7 +9,6 @@ function Index() {
                 style={{ backgroundImage: `url(images/DcredBackground.png)` }}
                 className="xl:bg-cover bg-center pb-10 md:pb-20 md:h-full w-full">
                 <div className="mx-auto container relative z-10 px-4 xl:px-0">
-                    <Navbar menu={menu} setmenu={setmenu} />
                     <div className="flow-root text-white pt-64">
                         <div className="ml-4 md:float-right xl:mr-64 lg:mr-8 md:mr-20 md:w-1/2 lg:w-1/2 xl:w-1/3 2xl:w-1/3 border-2 border-purpleBrand md:bg-black pt-4 md:max-w-screen-sm mr-4 -mt-16 ">
                             <div className="flex flex-col items-center justify-center mx-auto container font-robmono p-1 pb-8 pl-4 pr-4 pt-2 text-sm md:text-lg">

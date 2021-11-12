@@ -59,15 +59,13 @@ function Index() {
   return (
       <div className="xl:bg-cover bg-center h-62rem md:pb-20 md:h-full w-full xl:pb-64" style={{ backgroundImage: `url(images/DegenGangHomeTop.png)` }}>
         <div className="mx-auto container relative z-10 px-4 xl:px-0">
-          <Navbar menu={menu} setmenu={setmenu} />
-                  <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-8 text-white f-f-r pl-8 max-w-screen-sm md:pt-28 xl:pt-64 md:pb-40">
-                      <img className="" src="images/DegenLargePinkLogo.png" alt="img" /><br />
-                      <p className="pt-12 text-center">The biggest bunch of degenerates on the blockchain. 7,000 strong and ready to take over.</p>
-                      <a className="mt-12 mb-12" href="http://discord.gg/VyxVr4byxH" target="__blank">
-                          <Button title="LFG" />
-                      </a>
-
-          </div>
+            <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-8 text-white f-f-r pl-8 max-w-screen-sm md:pt-28 xl:pt-64 md:pb-40">
+                <img className="" src="images/DegenLargePinkLogo.png" alt="img" /><br />
+                <p className="pt-12 text-center">The biggest bunch of degenerates on the blockchain. 7,000 strong and ready to take over.</p>
+                <a className="mt-12 mb-12" href="http://discord.gg/VyxVr4byxH" target="__blank">
+                    <Button title="LFG" />
+                </a>
+            </div>
         </div>
     </div>
   );

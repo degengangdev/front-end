@@ -1,17 +1,11 @@
 import React, { useState } from "react";
-import Fade from "react-reveal/Fade";
 
-import Navbar from "../../common/navbar";
 function Index() {
-  const [menu, setmenu] = useState(false);
-
   return (
     <div
       style={{ backgroundImage: `url(images/BarFightsBackground.png)` }}
-      className="xl:bg-cover bg-center pb-10 md:pb-20 md:h-full w-full "
-    >
+      className="xl:bg-cover bg-center pb-10 md:pb-20 md:h-full w-full " >
         <div className="mx-auto container relative z-10 px-4 xl:px-0">
-          <Navbar menu={menu} setmenu={setmenu} />
           <div className="flex flex-col justify-center items-center pt-14  w-full h-full">
             <div className="w-full md:w-10/12 lg:w-9/12 xl:w-2/3">
               <div className="flex flex-col justify-center items-center">
