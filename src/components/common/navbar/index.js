@@ -257,11 +257,11 @@ function Index({ setmenu, menu }) {
                 </a>{" "}
               </li>
             ) : (
-              <li>
-                <a href="/">
-                  <Button title="APE IN" />
-                </a>{" "}
-              </li>
+            <li>
+                <a href="https://opensea.io/collection/degengang" target="__blank">
+                    <Button title="CONNECT" />
+                </a>
+            </li>
             )}
           </ul>
         </div>
