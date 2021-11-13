@@ -17,7 +17,7 @@ export default function ClaimPageLitePaper() {
                     <p className="text-white text-xl md:text-3xl lg:text-4xl xl:text-41 pb-16">
                         LITEPAPER
                     </p>
-                    <a href="http://discord.gg/VyxVr4byxH" target="__blank">
+                        <a href="documents/Degen-Gang-Litepaper[27973].pdf" target="__blank">
                         <Button title="Litepaper" />
                     </a>
                 </div>
