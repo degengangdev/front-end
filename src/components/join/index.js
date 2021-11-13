@@ -13,7 +13,7 @@ function Index() {
             JOIN THE DISCORD{" "}
           </p>
           <a href="http://discord.gg/VyxVr4byxH" target="__blank">
-            <Button title="FRENS" />
+            <Button title="DISCORD" />
           </a>
         </div>
       </div>

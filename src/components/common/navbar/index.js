@@ -92,7 +92,7 @@ function Index({ setmenu, menu }) {
               <line x1={4} y1={18} x2={20} y2={18} />
             </svg>
           </button>
-          <li className="text-xs xl:text-base 2xl:text-lg -mt-2 hidden lg:flex items-center md:ml-6 ">
+          <li className="text-xs xl:text-base 2xl:text-md -mt-2 hidden lg:flex items-center md:ml-6 ">
             <ul className="flex items-center space-x-4 2xl:space-x-6">
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/#about">about</a>
@@ -108,6 +108,9 @@ function Index({ setmenu, menu }) {
               </li> */}
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/barfights">bar fights</a>
+              </li>
+              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
+                  <a href="/claim">claim</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="http://degengangmerch.com" target="_blank" rel="noreferrer">merch</a>
