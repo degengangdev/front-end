@@ -10,7 +10,7 @@ export default function ClaimPageHero() {
         <Fade bottom>
           <div
               style={{ backgroundImage: `url(images/ClaimPageHeroBackground.png)` }}
-              className="bg-cover bg-center h-full w-full  z-10"
+              className="bg-cover bg-center h-full w-full z-10"
         >
             <div className="mx-auto container relative z-10 px-4 xl:px-0">
             <Navbar menu={menu} setmenu={setmenu} />
