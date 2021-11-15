@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from "../common/button";
 import Fade from "react-reveal/Fade";
 import Navbar from "../common/navbar";
+import ImxClaimButton from "../ImmutableX/imxClaimButton"
 
 export default function ClaimPageHero() {
     const [menu, setmenu] = useState(false);
@@ -18,23 +19,21 @@ export default function ClaimPageHero() {
                 <p className="text-white text-xl md:text-3xl lg:text-4xl xl:text-xl">
                     PIXEL DEGENS
                 </p>
-                <p className="text-white text-sm pb-8 f-f-r mt-8">
+                <p className="text-white text-2xs sm:text-xs md:text-sm pb-8 f-f-r mt-8">
                   CLAIM YOUR PIXEL DEGENS
                 </p>
-              <p className="text-white text-sm pb-8 f-f-r">
-                  PIXEL DEGEN CONTRACT: 0xb2aF...L7V4
+                <p className="text-white text-2xs sm:text-xs md:text-sm pb-8 f-f-r">
+                    PIXEL DEGEN CONTRACT: 0xb2aF...L7V4
                 </p>
-              <p className="text-white text-sm pb-8 f-f-r">
-                  CLAIMABLE AMOUNT: 10
+                <p className="text-white text-2xs sm:text-xs md:text-sm pb-8 f-f-r">
+                    CLAIMABLE AMOUNT: 10
                 </p>
-              <p className="text-white text-sm pb-8 f-f-r">
-                  WALLET: 0xb5aG...H7B6
+                <p className="text-white text-2xs sm:text-xs md:text-sm pb-8 f-f-r">
+                    WALLET: 0xb5aG...H7B6
                 </p>
-                  <a href="http://discord.gg/VyxVr4byxH" target="__blank">
-                      <Button title="Claim" />
-                  </a>
-                </div>
-                <div className="pb-20 md:pb-60"></div>
+                <ImxClaimButton />
+              </div>
+              <div className="pb-20 md:pb-60"></div>
            </div>
           </div>
         </Fade>

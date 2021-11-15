@@ -25,9 +25,9 @@ function Index() {
                           </p>
                           <div className="flex flex-col items-center justify-center">
                               <p className="mt-8 sm:mb-16">
-                                  <a href="http://bbc.co.uk" target="__blank">
-                                      <Button title="Litepaper" />
-                                  </a>
+                                <a href="documents/Degen-Gang-Litepaper[27973].pdf" target="__blank">
+                                  <Button title="Litepaper" />
+                                </a>
                               </p>
                           </div>
                      </div>

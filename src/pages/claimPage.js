@@ -6,11 +6,11 @@ import Footer from "../components/footer";
 
 export default function ClaimPage() {
   return (
-      <>
-          <ClaimPageHero />
-          <ClaimPageLitePaper />
-          <Join />
-          <Footer />
-      </>
+    <>
+      <ClaimPageHero />
+      <ClaimPageLitePaper />
+      <Join />
+      <Footer />
+    </>
   );
 }
