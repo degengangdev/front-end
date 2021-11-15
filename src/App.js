@@ -10,6 +10,7 @@ import ComingSoon from "./pages/comingSoon";
 import Barfight from "./pages/barFight";
 import DcredPage from "./pages/dcredPage";
 import BeastsPage from "./pages/beastsPage";
+import ClaimPage from "./pages/claimPage";
 
 import {
   setAddress,
@@ -131,8 +132,7 @@ class App extends Component {
             <Route path="/" component={Degen} exact />
             <Route path="/dcred" component={DcredPage} exact />
             <Route path="/barfights" component={Barfight} exact />
-                    <Route path="/beasts" component={BeastsPage} exact />
-            <Route path="/soon" component={ComingSoon} exact />
+            <Route path="/claim" component={ClaimPage} exact />
           </Switch>
         </Router>
         <NotificationContainer />
