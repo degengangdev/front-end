@@ -10,7 +10,7 @@ function Index() {
                 className="bg-cover bg-center h-full w-full md:py-24 xl:py-32"
             >
                 <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-8 text-white f-f-r lg:pr-8">
-                    <p className="text-white text-large font-wraith text-2xl text-center">POST LAUNCH ROADMAP</p>
+                    <p className="text-white text-large font-wraith text-2xl text-center mt-8">POST LAUNCH ROADMAP</p>
                     <div className="grid grid-cols-1 md:grid-cols-7 gap-8  pl-8 max-w-screen-lg pt-16">
                         <div className="md:col-span-4">
                             <p className="pl-12 w-64 text-white mt-8 font-wraith text-2xl pt-2 pb-4" style={{ backgroundImage: `url(images/PhaseBackground.png)` }}>
@@ -26,7 +26,7 @@ function Index() {
                         <div className="md:col-span-3 md:mt-20 flex flex-col items-center justify-center">
                                 <img
                                     className="mt-8 lg:w-2/5 lg:pr-5 xl:w-1/2 xl:pr-10 "
-                                    src="/images/Governance.png"
+                                    src="/images/phase1.png"
                                     alt=""
                                 />
                             </div>
@@ -35,7 +35,7 @@ function Index() {
                         <div className="md:col-span-3 mt-20md:mt-20 flex flex-col items-center justify-center hidden md:block">
                             <img
                                 className="mt-6 lg:w-3/5 lg:pr-5 xl:pr-10 lg:ml-24 mt-16"
-                                src="/images/RoadMapBeast.png"
+                                src="/images/phase2.png"
                                 alt=""
                             />
                         </div>
@@ -53,7 +53,7 @@ function Index() {
                         <div className="md:col-span-3 md:mt-20 flex flex-col items-center justify-center block md:hidden">
                             <img
                                 className="w-1/2 mt-6 lg:w-2/5 lg:pr-5 xl:w-1/2 xl:pr-10"
-                                src="/images/RoadMapBeast.png"
+                                src="/images/phase2.png"
                                 alt=""
                             />
                         </div>
@@ -73,7 +73,7 @@ function Index() {
                         <div className="md:col-span-3 md:mt-20 flex flex-col items-center justify-center">
                             <img
                                 className="-mt-6 lg:pr-5 xl:pr-10 "
-                                src="/images/RoadMapBarFights.png"
+                                src="/images/phase3.png"
                                 alt=""
                             />
                         </div>
@@ -82,7 +82,7 @@ function Index() {
                     <div className="md:col-span-3 md:mt-20 flex flex-col items-center justify-center hidden md:block  lg:ml-24">
                             <img
                                 className="mt-20 lg:w-4/5 lg:pr-5 xl:pr-10 -mt-2"
-                                src="/images/RoadMapBarFightsV2.png"
+                                src="/images/phase4.png"
                                 alt=""
                             />
                         </div>
@@ -100,7 +100,7 @@ function Index() {
                         <div className="md:col-span-3 flex flex-col items-center justify-center block md:hidden">
                             <img
                             className="mt-20 w-1/2 lg:w-2/5 lg:pr-5 xl:w-1/2 xl:pr-10"
-                                src="/images/RoadMapBarFightsV2.png"
+                                src="/images/phase4.png"
                                 alt=""
                             />
                         </div>
