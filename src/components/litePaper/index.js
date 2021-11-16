@@ -23,7 +23,7 @@ function Index() {
                           <p className="text-white mt-8">
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
                           </p>
-                          <div className="flex flex-col items-center justify-center">
+                          <div className="flex flex-col items-left justify-left">
                               <p className="mt-8 sm:mb-16">
                                 <a href="documents/Degen-Gang-Litepaper[27973].pdf" target="__blank">
                                   <Button title="Litepaper" />
