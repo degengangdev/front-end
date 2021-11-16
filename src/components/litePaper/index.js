@@ -34,7 +34,7 @@ function Index() {
                   <div className="flex flex-col items-center justify-center">
                       <img
                               className="w-1/2 md:w-3/5 lg:pr-5  xl:pr-10 pb-24"
-                              src="/images/FeatureCharacter.png"
+                              src="/images/degens-rotate.gif"
                               alt=""
                           />
                      </div>
