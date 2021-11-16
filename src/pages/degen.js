@@ -8,6 +8,7 @@ import DegenTypes from "../components/degenTypes";
 import LitePaper from "../components/litePaper";
 import RoadMap from "../components/roadmap";
 import Navbar from "../components/common/navbar";
+import AnimatedHero from "../components/hero/animatedHero"
 
 export default function Degen() {
     const [menu, setmenu] = useState(false);

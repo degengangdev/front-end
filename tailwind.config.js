@@ -48,7 +48,12 @@ module.exports = {
             "150pct": "200%",
             "200pct": "200%",
             "btn": "6rem",
-        },
+      },
+      margin: {
+        "30rem": "30rem",
+        "36rem": "36rem",
+        "40rem": "40rem",
+      },
       fontFamily: {
           rob: ["roboto", "plateia"],
           robmono: ["robotomono", "roboto", "plateia"],

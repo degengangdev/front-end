@@ -59,7 +59,7 @@ function Index({ setmenu, menu }) {
 
   return (
     <>
-      <nav className="w-full pt-6 md:pt-8 xl:pt8">
+      <nav className="w-full pt-6 md:pt-8 xl:pt8 mb-8 fixed bg-black z-50 pb-2">
         <ul className="flex items-center justify-center lg:justify-around">
           <li>
             <Link to="/">
