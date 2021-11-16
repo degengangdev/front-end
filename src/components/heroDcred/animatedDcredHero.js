@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import Button from "../common/button";
 import Vimeo from '@u-wave/react-vimeo';
+import ImxClaimButton from "../../components/ImmutableX/imxClaimButton";
 
 import useTotalSupply from "../../hooks/useTotalSupply";
 function AnimatedDcredHero() {
@@ -70,9 +70,7 @@ function AnimatedDcredHero() {
               <p className="mt-2">WALLET: 0xb5aG...H7B6</p>
             </span>
             <p className="mt-2 md:pt-6 font-wraith">
-              <a href="http://bbc.co.uk" target="__blank">
-                <Button title="Claim" />
-              </a>
+              <ImxClaimButton />
             </p>
           </div>
         </div>
