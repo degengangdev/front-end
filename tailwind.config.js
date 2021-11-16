@@ -26,10 +26,18 @@ module.exports = {
       height: {
         "62rem": "62rem",
         "30rem": "30rem",
+        "238px": "238px",
+        "220px": "220px",
+        "227px": "227px",
+        "233px": "233px",
           },
       width: {
         "20rem": "20rem",
         "30rem": "30rem",
+        "196px": "196px",
+        "209px": "209px",
+        "336px": "336px",
+        "342px": "342px",
       },
         minWidth: {
             '0': '0',

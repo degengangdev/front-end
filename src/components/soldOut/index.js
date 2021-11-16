@@ -3,45 +3,33 @@ import React from "react";
 function Index() {
     return (
         <div id="soldOut">
-            <div className="h-auto w-full py-6 z-10 mb-8">
-                <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-1 text-white f-f-r">
-                    <div class="grid grid-cols-1 md:grid-cols-8 gap-0 md:place-items-end pl-8 max-w-screen-lg ">
-                        <div className="hidden md:block">
-                            <img
-                                alt=""
-                                className=""
-                                src="images/SoldOutLeftMullet.png"
-                            />
-                        </div>
-                        <div className="col-span-2">
-                            <img
-                                alt=""
-                                className="w-11/12"
-                                src="images/SoldOutLeftTwo.png"
-                            />
-                        </div>
-                        <div className="col-span-2">
-                            <img
-                                alt=""
-                                className=""
-                                src="images/SoldOutLogo.png"
-                            />
-                        </div>
-                        <div className="col-span-2">
-                            <img
-                                alt=""
-                                className="w-11/12"
-                                src="images/SoldOutRightTwo.png"
-                            />
-                        </div>
-                        <div className="hidden md:block">
-                            <img
-                                alt=""
-                                className="-ml-8"
-                                src="images/SoldOutRightSingle.png"
-                            />
-                        </div>
-                    </div>
+            <div className="h-auto w-full pt-6 z-10 px-8">
+                <div className="flex flex-col md:flex-row items-center justify-center mx-auto container">
+                  <img
+                    alt=""
+                    className="mt-6 hidden md:block lg:hidden 2xl:block"
+                    src="images/SoldOutLeftMullet.png"
+                  />
+                  <img
+                    alt=""
+              className="mt-8 md:hidden lg:block"
+                    src="images/SoldOutLeftTwo.png"
+                  />
+                  <img
+                      alt=""
+                      className="-mt-6 ml-8"
+                      src="images/sold-out-smaller.gif"
+                  />
+                  <img
+                      alt=""
+                      className="ml-6 md:hidden lg:block"
+                      src="images/SoldOutRightTwo.png"
+                  />
+                  <img
+                      alt=""
+              className="-ml-6 hidden md:block lg:hidden 2xl:block"
+                      src="images/SoldOutRightSingle.png"
+                  />
                 </div>
             </div>
       </div>
