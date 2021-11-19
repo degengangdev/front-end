@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\public\\images",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\common",
+    "\\src\\components\\common\\navbar",
+    "\\src\\components\\features",
+    "\\src\\components\\hero",
+    "\\src\\components\\roadmap",
+    "\\src\\pages"
   ],
-  "SelectedNode": "\\C:\\dev-degengang\\website",
+  "SelectedNode": "\\src\\components\\claimPage\\claimPageHero.js",
   "PreviewInSolutionExplorer": false
 }
