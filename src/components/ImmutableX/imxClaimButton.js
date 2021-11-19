@@ -21,7 +21,8 @@ const ImxClaimButton = () => {
       setWallet(address)
     }
     catch (err) {
-      setErrorMessage("Info: " + err.message);
+      if (err.message != "Link Window Closed")
+        setErrorMessage("Message: " + err.message);
     }
   }
 
@@ -31,7 +32,8 @@ const ImxClaimButton = () => {
       setWallet("")
     }
     catch (err) {
-      setErrorMessage("Info: " + err.message);
+      if (err.message != "Link Window Closed")
+        setErrorMessage("Message: " + err.message);
     }
   }
 
@@ -52,7 +54,8 @@ const ImxClaimButton = () => {
         })
     }
     catch (err) {
-      setErrorMessage("Info: " + err.message);
+      if(err.message != "Link Window Closed")
+        setErrorMessage("Message: " + err.message);
     }
   }
 
