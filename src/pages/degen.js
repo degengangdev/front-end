@@ -16,7 +16,7 @@ export default function Degen() {
   return (
       <>
       <Navbar menu={menu} setmenu={setmenu} />
-      <Hero />
+      <AnimatedHero />
       <SoldOut />
       <LitePaper />
       <DegenTypes />

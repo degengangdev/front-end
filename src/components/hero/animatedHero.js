@@ -56,18 +56,20 @@ function AnimatedHero() {
     return () => clearInterval(timer);
   }, [timestamp]);
   return (
-    <div className="">
-      <Vimeo
-        video="https://player.vimeo.com/video/644097813?h=2fefa73ddd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    <div className="bg-no-repeat bg-cover bg-center
+                bg-green-200 w-full xh-800px border-2 " style={{ backgroundImage: `url(images/DegenGangHomeTop.png)` }}>
+      {/*<div style={{ height: "1024px" }}></div>*/}
+      <Vimeo className="mb-6"
+        video="https://vimeo.com/647780689/1c563561c9"
         autoplay={true} controls={true} loop={true} background={true} responsive={true} width="2000px"
       />
-      <div className="inline-block flex flex-col items-center justify-center mx-auto container text-white f-f-r pl-4 pr-4 max-w-screen-sm w-full" style={{ marginLeft: "0 auto", marginRight: "0 auto",  marginTop: "-450px"}}>
-        <img className="pt-16 md:pt-0 w-2/3 md:w-full z-50" src="images/DegenLargePinkLogo.png" alt="img" /><br />
-        <p className="pt-12 text-center z-50">The biggest bunch of degenerates on the blockchain. 7,000 strong and ready to take over.</p>
-        <a className="mt-12 mb-12 " href="http://discord.gg/VyxVr4byxH" target="__blank">
-          <Button title="LFG" className="w-3/4" />
-        </a>
-      </div>
+    {/*  <div className="inline-block flex flex-col items-center justify-center mx-auto container text-white f-f-r pl-4 pr-4 max-w-screen-sm w-full" style={{ marginLeft: "0 auto", marginRight: "0 auto",  marginTop: "-800px"}}>*/}
+    {/*    <img className="pt-16 md:pt-0 w-2/3 md:w-full z-20" src="images/DegenLargePinkLogo.png" alt="img" /><br />*/}
+    {/*    <p className="pt-12 text-center z-20">The biggest bunch of degenerates on the blockchain. 7,000 strong and ready to take over.</p>*/}
+    {/*    <a className="mt-12 mb-12 " href="http://discord.gg/VyxVr4byxH" target="__blank">*/}
+    {/*      <Button title="LFG" className="w-3/4" />*/}
+    {/*    </a>*/}
+    {/*  </div>*/}
     </div>
   );
 }

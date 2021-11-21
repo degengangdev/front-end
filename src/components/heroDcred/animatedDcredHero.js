@@ -57,8 +57,8 @@ function AnimatedDcredHero() {
   }, [timestamp]);
   return (
     <div className="">
-      <div className="float-left flex flex-col mx-auto container text-white f-f-r pl-36 pr-4 w-full mt-32  md:mt-36  lg:mt-48 " >
-        <div className="border-2 border-purpleBrand z-40 md:bg-black pt-0 md:pt-4 -mt-16 md:mb-16 md:ml-64 xl:ml-40rem lg:ml-96 sm:w-96  lg:w-30rem ">
+      <div className="float-left flex flex-col mx-auto container text-white f-f-r pl-96 pr-4 w-full mt-32  md:mt-36  lg:mt-48 " >
+        <div className="border-2 border-purpleBrand z-40 md:bg-black pt-0 md:pt-4 -xmt-16 md:mb-16 md:ml-64 xl:ml-40rem lg:ml-96 sm:w-96  lg:w-30rem ">
           <div className="flex flex-col items-center justify-center mx-auto container font-robmono p-1 pb-8 pl-4 pr-4 pt-2 text-sm md:text-md">
             <span className="font-wraith">What is $Dcred?</span>
             <span className="mt-2 md:pt-6 xl:mt-12">Degen Street Cred, $DCRED, is our governance token that will give degens the power to</span>
@@ -76,7 +76,7 @@ function AnimatedDcredHero() {
         </div>
       </div>
       <Vimeo
-        video="https://player.vimeo.com/video/644097813?h=2fefa73ddd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        video="https://vimeo.com/647780599/807994f0a4"
         autoplay={true} controls={true} loop={true} background={true} responsive={true}
       />
     </div>
