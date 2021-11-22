@@ -8,8 +8,17 @@ import { pixelDegenContractId } from '../ImmutableX//imxConfig'
 export default function ClaimPageHero() {
   const [menu, setmenu] = useState(false);
   const [walletId, setWalletId] = useState("");
-  const [canClaim, setCanClaim] = useState(false);
+  const [canClaim, setCanClaim] = useState(0);
   const [claimMessage, setClaimMessage] = useState("");
+  const [claimableTokens, setClaimableTokens] = useState("");
+
+  const imxButtonHandler = (walletId, canClaim, availTokens, message) => {
+    setWalletId(walletId);
+    setCanClaim(canClaim);
+    setClaimableTokens(availTokens);
+    setClaimMessage(message);
+  }
+
   return (
     <Fade bottom>
       <div
@@ -38,11 +47,15 @@ export default function ClaimPageHero() {
             <p className="text-white text-2xs sm:text-xs md:text-sm pb-8 f-f-r">
               PIXEL DEGEN CONTRACT: {pixelDegenContractId.substr(0, 5) + " ... " + pixelDegenContractId.substr(pixelDegenContractId.length - 5)}
             </p>
-            {!canClaim ?
-              <></> :
+            {canClaim == 0 ?
               <>
-                <p className="text-white text-2xs sm:text-xs md:text-sm pb-8 f-f-r">
-                  CLAIMABLE AMOUNT: 10
+              </> :
+              <>
+                <p className="text-white text-center text-2xs sm:text-xs md:text-sm pb-8 f-f-r">
+                  {canClaim} CLAIMABLE ID(s)
+                </p>
+                <p className="text-white text-center text-2xs sm:text-xs md:text-sm pb-8 f-f-r">
+                  {claimableTokens}
                 </p>
               </>
             }
@@ -54,7 +67,7 @@ export default function ClaimPageHero() {
                 </p>
               </>
             }
-            <ImxClaimButton onSetCanClaim={setCanClaim} onSetWallet={setWalletId} onSetClaimMessage={setClaimMessage} />
+            <ImxClaimButton onUpdate={imxButtonHandler} />
           </div>
           <div className="pb-20 md:pb-60"></div>
         </div>

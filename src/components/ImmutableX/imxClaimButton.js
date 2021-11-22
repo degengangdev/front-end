@@ -12,7 +12,7 @@ const ImxClaimButton = (props) => {
   const [wallet, setWallet] = useState("")
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState("")
-  const [canClaim, setCanClaim] = useState(false)
+  const [canClaim, setCanClaim] = useState(0)
   //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -24,9 +24,8 @@ const ImxClaimButton = (props) => {
       checkValidClaim(walletId);
     }
     else {
-      props.onSetCanClaim(false);
-      props.onSetClaimMessage("");
-      props.onSetWallet(walletString);
+      setCanClaim(0);
+      props.onUpdate(walletString, 0, "", "");
     }
   }
 
@@ -58,22 +57,27 @@ const ImxClaimButton = (props) => {
       setErrorMessage("");
       setLoading(true)
       var walletString = walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5);
-      props.onSetWallet(walletString);
-      props.onSetClaimMessage("Checking eligibility ...");
+      props.onUpdate(walletString, 0, "", "Checking eligibility ...");
+      debugger;
       axios.get('/transactions/check/' + walletId)
         .then((res) => {
-          debugger;
-          console.log(res.data.results);
-          setLoading(false);
-          props.onSetCanClaim(true);
-          props.onSetClaimMessage("TODO: Transaction check response");
+          if (res.data.status != null && res.data.status == "Error") {
+              setCanClaim(0);
+              props.onUpdate(walletString, 0, "", res.data.message);
+          }
+          else if (res.data.tokens != null && res.data.tokens.length > 0) {
+            var availTokens = res.data.tokens.join(", ");
+            console.log(res.data.results);
+            setLoading(false);
+            setCanClaim(res.data.tokens.length);
+            props.onUpdate(walletString, res.data.tokens.length, availTokens, "");
+          }
         })
         .catch(err => {
           console.log(err.toString())
           setLoading(false);
-          props.onSetCanClaim(false);
-          props.onSetClaimMessage("Unexpected error: " + err.toString());
-          props.onSetWallet(walletString);
+          setCanClaim(0);
+          props.onUpdate(walletString, 0, "", "Unexpected error: " + err.toString());
         })
     }
     catch (err) {
@@ -108,7 +112,7 @@ const ImxClaimButton = (props) => {
     <div>
       {
         wallet ?
-          canClaim ?
+          canClaim > 0 ?
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">
               <div className="col-span-1 justify-center">
                 <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
