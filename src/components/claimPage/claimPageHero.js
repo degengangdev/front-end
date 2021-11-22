@@ -28,8 +28,8 @@ export default function ClaimPageHero() {
         <div className="mx-auto container relative z-10 px-4 xl:px-0">
           <Navbar menu={menu} setmenu={setmenu} />
           <div className="pt-20 md:pt-60"></div>
-          <div className="flex flex-col items-center justify-center mx-auto container px-4 xl:px-0 border-solid border-2 sm:11/12 md-7/12 lg:w-5/12 xl:w-1/3 py-8 bg-black">
-            <p className="text-white text-xl md:text-3xl lg:text-3xl xl:text-xl -mt-24 sm:mt-0">
+          <div className="flex flex-col items-center justify-center mx-auto container px-4 xl:px-0 border-solid border-2 sm:w-11/12 md:w-3/4 lg:w-7/12 xl:w-1/3 py-8 bg-black">
+            <p className="text-white text-xl md:text-3xl lg:text-3xl xl:text-xl sm:mt-0">
               PIXEL DEGENS
             </p>
             {claimMessage == "" ?
@@ -69,7 +69,7 @@ export default function ClaimPageHero() {
             }
             <ImxClaimButton onUpdate={imxButtonHandler} />
           </div>
-          <div className="pb-20 md:pb-60"></div>
+          <div className="pb-20 md:pb-60 lg:pb-96"></div>
         </div>
       </div>
     </Fade>

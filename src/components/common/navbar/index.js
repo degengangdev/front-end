@@ -64,7 +64,7 @@ function Index({ setmenu, menu }) {
           <li>
             <Link to="/">
               <img
-                className="w-60 md:w-auto lg:w-40 xl:w-auto"
+                className="w-40 sm:w-60 md:w-auto lg:w-40 xl:w-auto"
                 src="images/logo.png"
                 alt="logo"
               />
