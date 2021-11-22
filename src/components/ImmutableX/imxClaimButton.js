@@ -94,6 +94,8 @@ const ImxClaimButton = (props) => {
         .then((res) => {
           setLoading(false);
           //Claim completed - tell parent component there are no claimable tokens
+          setCanClaim(0);
+          setClaimableTokens("");
           props.onUpdate(walletString, 0, "", res.data.results);
         })
         .catch(err => {
