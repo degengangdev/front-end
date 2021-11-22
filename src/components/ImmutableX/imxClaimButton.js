@@ -3,35 +3,82 @@ import { useState } from 'react';
 import axios from "axios";
 import { linkAddress, baseURL } from './imxConfig'
 import Button from "../common/button";
+import { getJsonWalletAddress } from 'ethers/lib/utils';
 
 axios.defaults.baseURL = baseURL;
 
-const ImxClaimButton = () => {
+const ImxClaimButton = (props) => {
   const link = new Link(linkAddress);
   const [wallet, setWallet] = useState("")
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState("")
+  const [canClaim, setCanClaim] = useState(false)
   //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
+
+  const updateWallet = (walletId) => {
+    var walletString = "";
+    setWallet(walletId);
+    if (walletId.length > 10) {
+      //Check if we can make a claim
+      checkValidClaim(walletId);
+    }
+    else {
+      props.onSetCanClaim(false);
+      props.onSetClaimMessage("");
+      props.onSetWallet(walletString);
+    }
+  }
 
   const setupAndLogin = async () => {
     try {
       setErrorMessage("");
       const { address } = await link.setup({});
-      setWallet(address)
+      updateWallet(address)
     }
     catch (err) {
-      setErrorMessage("Info: " + err.message);
+      if (err.message != "Link Window Closed")
+        setErrorMessage(err.message);
     }
   }
 
   const logout = () => {
     try {
       setErrorMessage("");
-      setWallet("")
+      updateWallet("")
     }
     catch (err) {
-      setErrorMessage("Info: " + err.message);
+      if (err.message != "Link Window Closed")
+        setErrorMessage(err.message);
+    }
+  }
+
+  const checkValidClaim = (walletId) => {
+    try {
+      setErrorMessage("");
+      setLoading(true)
+      var walletString = walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5);
+      props.onSetWallet(walletString);
+      props.onSetClaimMessage("Checking eligibility ...");
+      axios.get('/transactions/check/' + walletId)
+        .then((res) => {
+          debugger;
+          console.log(res.data.results);
+          setLoading(false);
+          props.onSetCanClaim(true);
+          props.onSetClaimMessage("TODO: Transaction check response");
+        })
+        .catch(err => {
+          console.log(err.toString())
+          setLoading(false);
+          props.onSetCanClaim(false);
+          props.onSetClaimMessage("Unexpected error: " + err.toString());
+          props.onSetWallet(walletString);
+        })
+    }
+    catch (err) {
+      if (err.message != "Link Window Closed")
+        setErrorMessage(err.message);
     }
   }
 
@@ -52,7 +99,8 @@ const ImxClaimButton = () => {
         })
     }
     catch (err) {
-      setErrorMessage("Info: " + err.message);
+      if (err.message != "Link Window Closed")
+        setErrorMessage(err.message);
     }
   }
 
@@ -60,22 +108,27 @@ const ImxClaimButton = () => {
     <div>
       {
         wallet ?
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">
-            <div className="col-span-1 justify-center">
-              <Button tailwind="w-32" title="Logout" onClickhandler={logout}></Button>
+          canClaim ?
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">
+              <div className="col-span-1 justify-center">
+                <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
+              </div>
+              <div className="col-span-1 justify-center">
+                {!loading &&
+                  <div className="mt-4 md:mt-0">
+                    <Button tailwind="w-44" title="Claim" onClickhandler={claim}></Button>
+                    <div>{response}</div>
+                  </div>
+                }
+              </div>
             </div>
-            <div className="col-span-1 justify-center">
-              {!loading &&
-                <div className="mt-4 md:mt-0">
-                  <Button tailwind="w-32" title="Claim" onClickhandler={claim}></Button>
-                  <div>{response}</div>
-                </div>
-              }
+            :
+            <div className="flex flex-col items-center justify-center">
+              <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
             </div>
-          </div>
           :
           <div className="flex flex-col items-center justify-center">
-            <Button tailwind="w-32" title="Login" onClickhandler={setupAndLogin}></Button>
+            <Button tailwind="w-44" title="Connect" onClickhandler={setupAndLogin}></Button>
             <p className="text-white text-xs f-f-r justify-center mt-4">{errorMessage}</p>
           </div>
       }
