@@ -13,6 +13,7 @@ const ImxClaimButton = (props) => {
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState("")
   const [canClaim, setCanClaim] = useState(0)
+  const [claimableTokens, setClaimableTokens] = useState("")
   //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -58,7 +59,6 @@ const ImxClaimButton = (props) => {
       setLoading(true)
       var walletString = walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5);
       props.onUpdate(walletString, 0, "", "Checking eligibility ...");
-      debugger;
       axios.get('/transactions/check/' + walletId)
         .then((res) => {
           if (res.data.status != null && res.data.status == "Error") {
@@ -67,17 +67,16 @@ const ImxClaimButton = (props) => {
           }
           else if (res.data.tokens != null && res.data.tokens.length > 0) {
             var availTokens = res.data.tokens.join(", ");
-            console.log(res.data.results);
-            setLoading(false);
             setCanClaim(res.data.tokens.length);
+            setClaimableTokens(availTokens);
+            setLoading(false);
             props.onUpdate(walletString, res.data.tokens.length, availTokens, "");
           }
         })
         .catch(err => {
-          console.log(err.toString())
           setLoading(false);
           setCanClaim(0);
-          props.onUpdate(walletString, 0, "", "Unexpected error: " + err.toString());
+          props.onUpdate(walletString, 0, "", err.toString());
         })
     }
     catch (err) {
@@ -89,17 +88,17 @@ const ImxClaimButton = (props) => {
   const claim = () => {
     try {
       setErrorMessage("");
-      setLoading(true)
+      setLoading(true);
+      var walletString = wallet.substr(0, 5) + " ... " + wallet.substr(wallet.length - 5);
       axios.post('/transactions/claim', { wallet })
         .then((res) => {
-          console.log(res.data.results);
           setLoading(false);
-          setResponse(JSON.stringify(res.data.results))
+          //Claim completed - tell parent component there are no claimable tokens
+          props.onUpdate(walletString, 0, "", res.data.results);
         })
         .catch(err => {
-          console.log(err.response.data.error)
           setLoading(false);
-          setResponse(err.response.data.error)
+          props.onUpdate(walletString, canClaim, claimableTokens, err.toString());
         })
     }
     catch (err) {
