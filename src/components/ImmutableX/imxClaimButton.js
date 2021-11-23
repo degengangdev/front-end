@@ -85,6 +85,10 @@ const ImxClaimButton = (props) => {
     }
   }
 
+  const getClaimedPixelDegens() {
+
+  }
+
   const claim = () => {
     try {
       setErrorMessage("");
@@ -92,11 +96,18 @@ const ImxClaimButton = (props) => {
       var walletString = wallet.substr(0, 5) + " ... " + wallet.substr(wallet.length - 5);
       axios.post('/transactions/claim', { wallet })
         .then((res) => {
+          if (res.data.status != null && res.data.status == "Error") {
+            setCanClaim(0);
+            props.onUpdate(walletString, 0, "", res.data.message);
+          }
+          else if (res.data.result != null && res.data.result.results != null) {
+            //Claim completed - tell parent component there are no more claimable tokens
+            setCanClaim(0);
+            setClaimableTokens("");
+            props.onUpdate(walletString, 0, "", "Congratulations!");
+            props.onSuccessfulClaim()
+          }
           setLoading(false);
-          //Claim completed - tell parent component there are no claimable tokens
-          setCanClaim(0);
-          setClaimableTokens("");
-          props.onUpdate(walletString, 0, "", res.data.results);
         })
         .catch(err => {
           setLoading(false);
