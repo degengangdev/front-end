@@ -57,13 +57,15 @@ const ImxClaimButton = (props) => {
     try {
       setErrorMessage("");
       setLoading(true)
+
       var walletString = walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5);
       props.onUpdate(walletString, 0, "", "Checking eligibility ...");
+
       axios.get('/transactions/check/' + walletId)
         .then((res) => {
           if (res.data.status != null && res.data.status == "Error") {
-              setCanClaim(0);
-              props.onUpdate(walletString, 0, "", res.data.message);
+            setCanClaim(0);
+            props.onUpdate(walletString, 0, "", res.data.message);
           }
           else if (res.data.tokens != null && res.data.tokens.length > 0) {
             var availTokens = res.data.tokens.join(", ");
@@ -83,10 +85,6 @@ const ImxClaimButton = (props) => {
       if (err.message != "Link Window Closed")
         setErrorMessage(err.message);
     }
-  }
-
-  const getClaimedPixelDegens() {
-
   }
 
   const claim = () => {

@@ -27,7 +27,8 @@
     "cors": "^2.8.5",
     "ethers": "^5.5.1",
     "express": "^4.17.1",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "pure-react-carousel": "1.27.8"
   },
   "scripts": {
     "start": "craco start",

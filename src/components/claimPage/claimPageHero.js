@@ -67,7 +67,7 @@ export default function ClaimPageHero() {
                 </p>
               </>
             }
-            <ImxClaimButton onUpdate={imxButtonHandler} />
+            <ImxClaimButton onUpdate={imxButtonHandler}  />
           </div>
           <div className="pb-20 md:pb-60 lg:pb-96"></div>
         </div>
