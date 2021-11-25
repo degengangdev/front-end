@@ -19,7 +19,7 @@ const ImxClaimButton = (props) => {
   //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
 
-  const activationDate = new Date("2021-11-25 11:40 GMT");
+  const activationDate = new Date("2021-11-25 11:50 GMT");
 
   const updateWallet = (walletId) => {
     var walletString = "";
