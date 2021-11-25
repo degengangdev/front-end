@@ -103,15 +103,12 @@ function Index({ setmenu, menu }) {
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/#bar">degen bar</a>
               </li>
-              {/* <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/#fight">BAR FIGHTS</a>
-              </li> */}
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/barfights">bar fights</a>
               </li>
-              {/*<li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">*/}
-              {/*    <a href="/claim">claim</a>*/}
-              {/*</li>*/}
+              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
+                  <a href="/claim">claim</a>
+              </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="http://degengangmerch.com" target="_blank" rel="noreferrer">merch</a>
               </li>
