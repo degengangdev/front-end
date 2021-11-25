@@ -202,18 +202,22 @@ function Index({ setmenu, menu }) {
             </button>
           </div>
           <ul className="flex flex-col text-xs pl-8 space-y-4 f-f-r uppercase">
-            <li className="text-white transition duration-150 ease-in ">
+            <li className="text-white uppercase transition duration-150 ease-in ">
               <a href="/#home">about</a>
             </li>
-            <li className="text-white">
+            <li className="text-white uppercase">
               <a href="/#roadmap">roadmap</a>
             </li>
-            <li className="text-white">
+            <li className="text-white uppercase">
               <a href="/#features">degen bar</a>
             </li>
-            <li className="text-white">
+            <li className="text-white uppercase">
               <a href="/barfights">BAR FIGHTS</a>
             </li>
+            <li className="text-white uppercase">
+              <a href="/claim">claim</a>
+            </li>
+
             <li className="text-white">
               <a href="http://degengangmerch.com">MERCH</a>
             </li>
