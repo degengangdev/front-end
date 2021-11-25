@@ -1,9 +1,8 @@
 import { Link } from '@imtbl/imx-sdk';
 import { useState } from 'react';
 import axios from "axios";
-import { linkAddress, baseURL } from './imxConfig'
+import { linkAddress, baseURL, bypassCheckApi, bypassClaimApi } from './imxConfig'
 import Button from "../common/button";
-import { getJsonWalletAddress } from 'ethers/lib/utils';
 
 axios.defaults.baseURL = baseURL;
 
@@ -13,6 +12,7 @@ const ImxClaimButton = (props) => {
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState("")
   const [canClaim, setCanClaim] = useState(0)
+  const [showInventory, setshowInventory] = useState(false)
   const [claimableTokens, setClaimableTokens] = useState("")
   //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
@@ -57,22 +57,32 @@ const ImxClaimButton = (props) => {
     try {
       setErrorMessage("");
       setLoading(true)
+      setshowInventory(false);
 
       var walletString = walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5);
       props.onUpdate(walletString, 0, "", "Checking eligibility ...");
+
+      if (bypassCheckApi) {
+        setCanClaim(0);
+        setshowInventory(true);
+        props.onUpdate(walletString, 0, "", "Test airdropped already");
+        setLoading(false);
+//        onClaimAllowed(walletString, ["1111", "2222", "3333", "4444", "5555"]);
+        return;
+      }
 
       axios.get('/transactions/check/' + walletId)
         .then((res) => {
           if (res.data.status != null && res.data.status == "Error") {
             setCanClaim(0);
+            if (res.data.message.includes("airdropped already")) {
+              setshowInventory(true);
+            }
             props.onUpdate(walletString, 0, "", res.data.message);
+            setLoading(false);
           }
           else if (res.data.tokens != null && res.data.tokens.length > 0) {
-            var availTokens = res.data.tokens.join(", ");
-            setCanClaim(res.data.tokens.length);
-            setClaimableTokens(availTokens);
-            setLoading(false);
-            props.onUpdate(walletString, res.data.tokens.length, availTokens, "");
+            onClaimAllowed(walletString, res.data.tokens);
           }
         })
         .catch(err => {
@@ -87,25 +97,41 @@ const ImxClaimButton = (props) => {
     }
   }
 
+  const onClaimAllowed = (walletString, tokenArray) => {
+    var claimableTokens = tokenArray.length;
+    var availTokens = tokenArray.join(", ");
+    setCanClaim(claimableTokens);
+    setClaimableTokens(availTokens);
+    setLoading(false);
+    props.onUpdate(walletString, claimableTokens, availTokens, "");
+  }
+
   const claim = () => {
     try {
       setErrorMessage("");
       setLoading(true);
+      setshowInventory(false);
       var walletString = wallet.substr(0, 5) + " ... " + wallet.substr(wallet.length - 5);
-      axios.post('/transactions/claim', { wallet })
+
+      if (bypassClaimApi) {
+        setCanClaim(0);
+        setLoading(false);
+        props.onUpdate(walletString, 0, "", "Test Error Message");
+//        onClaimSuccessful(walletString);
+        return;
+      }
+
+      axios.get('/transactions/claim/' + wallet)
         .then((res) => {
           if (res.data.status != null && res.data.status == "Error") {
             setCanClaim(0);
+            setLoading(false);
             props.onUpdate(walletString, 0, "", res.data.message);
           }
           else if (res.data.result != null && res.data.result.results != null) {
             //Claim completed - tell parent component there are no more claimable tokens
-            setCanClaim(0);
-            setClaimableTokens("");
-            props.onUpdate(walletString, 0, "", "Congratulations!");
-            props.onSuccessfulClaim()
+            onClaimSuccessful(walletString);
           }
-          setLoading(false);
         })
         .catch(err => {
           setLoading(false);
@@ -116,6 +142,14 @@ const ImxClaimButton = (props) => {
       if (err.message != "Link Window Closed")
         setErrorMessage(err.message);
     }
+  }
+
+  const onClaimSuccessful = (walletString) => {
+    setCanClaim(0);
+    setClaimableTokens("");
+    setshowInventory(true);
+    setLoading(false);
+    props.onUpdate(walletString, 0, "", "Congratulations!");
   }
 
   return (
@@ -137,9 +171,25 @@ const ImxClaimButton = (props) => {
               </div>
             </div>
             :
-            <div className="flex flex-col items-center justify-center">
-              <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
-            </div>
+            showInventory ?
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">
+                <div className="col-span-1 justify-center">
+                  <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
+                </div>
+                {!loading &&
+                  <div className="col-span-1 justify-center">
+                    <a href="https://market.x.immutable.com/inventory" target="__blank">
+                      <Button tailwind="w-44" title="Inventory" />
+                    </a>
+                  </div>
+                }
+              </div>
+              :
+              <div className="grid grid-cols-1 gap-y-2 gap-x-8">
+                <div className="col-span-1 justify-center">
+                  <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
+                </div>
+              </div>
           :
           <div className="flex flex-col items-center justify-center">
             <Button tailwind="w-44" title="Connect" onClickhandler={setupAndLogin}></Button>
