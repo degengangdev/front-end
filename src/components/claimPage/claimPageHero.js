@@ -34,7 +34,7 @@ export default function ClaimPageHero() {
             </p>
             {claimMessage == "" ?
               <>
-                <p className="text-white text-2xs sm:text-xs md:text-sm pb-8 f-f-r mt-8">
+                <p className="text-degenPink text-2xs sm:text-xs md:text-sm pb-8 f-f-r mt-8">
                   CLAIM YOUR PIXEL DEGENS
                 </p>
               </> :
