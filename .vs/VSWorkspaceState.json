@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\BarFightPage",
+    "\\src\\components\\BarFightPage\\hero",
+    "\\src\\components\\claimPage",
+    "\\src\\components\\common",
+    "\\src\\components\\common\\navbar",
+    "\\src\\components\\hero",
+    "\\src\\components\\ImmutableX"
   ],
-  "SelectedNode": "\\C:\\dev-degengang\\website",
+  "SelectedNode": "\\src\\components\\common\\navbar\\index.js",
   "PreviewInSolutionExplorer": false
 }
