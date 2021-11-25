@@ -8,7 +8,7 @@ const CountDownTimer = (props) => {
   const tick = () => {
     var now = new Date();
     var timeRemaining = (props.alarmDate - now) / 1000;
-    if (timeRemaining <= 0) {
+    if (timeRemaining <= 1) {
       //Timer ended
       props.onTimerExpired(true);
       setTime([0, 0, 0]);
