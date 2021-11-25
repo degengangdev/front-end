@@ -3,6 +3,7 @@ import { useState } from 'react';
 import axios from "axios";
 import { linkAddress, baseURL, bypassCheckApi, bypassClaimApi } from './imxConfig'
 import Button from "../common/button";
+import CountDownTimer from '../common/countDown'
 
 axios.defaults.baseURL = baseURL;
 
@@ -14,8 +15,11 @@ const ImxClaimButton = (props) => {
   const [canClaim, setCanClaim] = useState(0)
   const [showInventory, setshowInventory] = useState(false)
   const [claimableTokens, setClaimableTokens] = useState("")
+  const [claimsArePublic, setClaimsArePublic] = useState(false)
   //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
+
+  const activationDate = new Date("2021-11-25 11:40 GMT");
 
   const updateWallet = (walletId) => {
     var walletString = "";
@@ -192,7 +196,14 @@ const ImxClaimButton = (props) => {
               </div>
           :
           <div className="flex flex-col items-center justify-center">
-            <Button tailwind="w-44" title="Connect" onClickhandler={setupAndLogin}></Button>
+            {claimsArePublic ?
+              <Button tailwind="w-44" title="Connect" onClickhandler={setupAndLogin}></Button>
+              :
+              <>
+                <div className="text-white">Available in</div>
+                <CountDownTimer alarmDate={activationDate} onTimerExpired={setClaimsArePublic} />
+              </>
+            }
             <p className="text-white text-xs f-f-r justify-center mt-4">{errorMessage}</p>
           </div>
       }
