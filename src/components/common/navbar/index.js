@@ -59,12 +59,12 @@ function Index({ setmenu, menu }) {
 
   return (
     <>
-      <nav className="w-full pt-6 md:pt-8 xl:pt8 mb-8 fixed bg-black z-50 pb-2">
+      <nav className="w-full pt-6 md:pt-8 xl:pt8 mb-8 fixed bg-black z-50 pb-4">
         <ul className="flex items-center justify-center lg:justify-around">
           <li>
             <Link to="/">
               <img
-                className="w-44 md:w-auto lg:w-40 xl:w-auto"
+                className="w-2/3 xs:w-4/5 md:w-40 xl:w-auto"
                 src="images/DEGEN-GANG-LOGO 1.png"
                 alt="logo"
               />
@@ -72,7 +72,7 @@ function Index({ setmenu, menu }) {
           </li>
           <button
             onClick={() => setmenu(true)}
-            className="focus:outline-none absolute 2xl:hidden lg:hidden -right-2 md:right-0 text-white pr-4"
+            className="focus:outline-none absolute 2xl:hidden lg:hidden -right-2 md:right-0 text-white pr-4 mr-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -265,7 +265,7 @@ function Index({ setmenu, menu }) {
             ) : (
             <li>
                 <a href="https://opensea.io/collection/degengang" target="__blank">
-                    <Button title="CONNECT" />
+                    <Button title="OPENSEA" />
                 </a>
             </li>
             )}

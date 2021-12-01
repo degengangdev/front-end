@@ -197,7 +197,7 @@ const ImxClaimButton = (props) => {
           :
           <div className="flex flex-col items-center justify-center">
             {claimsArePublic ?
-              <Button tailwind="w-44" title="Connect" onClickhandler={setupAndLogin}></Button>
+              <Button tailwind="w-72 text-xs" title="Connect Wallet" onClickhandler={setupAndLogin}></Button>
               :
               <>
                 <div className="text-white">Available in</div>

@@ -25,7 +25,7 @@ export default function ClaimPageHero() {
         style={{ backgroundImage: `url(images/ClaimPageHeroBackground.png)` }}
         className="bg-cover bg-center h-full w-full z-10"
       >
-        <div className="mx-auto container relative z-10 px-4 xl:px-0">
+        <div className="mx-auto relative z-10 xl:px-0">
           <Navbar menu={menu} setmenu={setmenu} />
           <div className="pt-20 md:pt-60"></div>
           <div className="flex flex-col items-center justify-center mx-auto container px-4 xl:px-0 border-solid border-2 sm:w-11/12 md:w-3/4 lg:w-7/12 xl:w-1/3 py-8 bg-black">
