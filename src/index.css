@@ -31,18 +31,6 @@ body {
   background-color: black;
 }
 
-.divbackground {
-    background-size: cover;
-    background-attachment: scroll;
-    margin: 0;
-    width: 100%;
-    height: auto;
-    display: table;
-}
-.divmiddlecontent {
-    display:table-cell;
-    vertical-align: middle;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
