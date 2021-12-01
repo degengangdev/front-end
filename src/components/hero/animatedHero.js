@@ -57,7 +57,7 @@ function AnimatedHero() {
   }, [timestamp]);
   return (
     <>
-      <div >
+      <div className="pt-12">
         <div className="hidden sm:block ">
           <div className="sm:absolute w-full flex flex-col items-center justify-center mx-auto text-white f-f-r md:pt-24 lg:pt-36 xl:pt-48 pl-4 pr-4">
           <img className="pt-16 md:pt-0 sm:w-2/3 xl:w-1/2 z-20" src="images/DegenLargePinkLogo.png" alt="img" /><br />

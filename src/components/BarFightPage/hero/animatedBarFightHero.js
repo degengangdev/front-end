@@ -4,7 +4,7 @@ import Vimeo from '@u-wave/react-vimeo';
 function AnimatedBarFightHero() {
   return (
     <>
-      <div >
+      <div className="pt-12">
         <div className="hidden sm:block ">
           <div className="sm:absolute w-full flex flex-col items-center justify-center mx-auto text-white f-f-r pt-16 pl-4 pr-4">
             <img

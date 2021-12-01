@@ -57,7 +57,7 @@ function AnimatedDcredHero() {
   }, [timestamp]);
   return (
     <>
-      <div >
+      <div className="pt-12">
         <div className="hidden sm:block ">
           <div className="absolute w-full flex flex-col items-end justify-center mx-auto text-white f-f-r md:pt-12 lg:pt-24 pl-4 pr-16 xl:pr-48">
             <div className="border-2 border-purpleBrand bg-black pt-2 mt-16 md:mt-8 md:mb-16 sm:w-96  lg:w-30rem ">
