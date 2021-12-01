@@ -59,7 +59,7 @@ function AnimatedDcredHero() {
     <>
       <div >
         <div className="hidden sm:block ">
-          <div className="absolute w-full flex flex-col items-end justify-center mx-auto text-white f-f-r md:pt-12 lg:pt-24 pl-4 pr-16">
+          <div className="absolute w-full flex flex-col items-end justify-center mx-auto text-white f-f-r md:pt-12 lg:pt-24 pl-4 pr-16 xl:pr-48">
             <div className="border-2 border-purpleBrand bg-black pt-2 mt-16 md:mt-8 md:mb-16 sm:w-96  lg:w-30rem ">
               <div className="flex flex-col items-center justify-center mx-auto text-xs lg:text-sm font-robmono p-1 pb-8 pl-4 pr-4 pt-2 ">
                 <span className="font-wraith">What is $Dcred?</span>

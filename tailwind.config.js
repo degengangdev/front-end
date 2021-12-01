@@ -12,6 +12,8 @@ module.exports = {
         yellowBrand: "#ffff00",
         magenta: "#ff00ff",
         skyBlue: "#00ffff",
+        degenPink: "#ec1097",
+
       },
       boxShadow: {
           btn: "2px 2px #EBF759",

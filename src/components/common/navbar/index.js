@@ -155,7 +155,7 @@ function Index({ setmenu, menu }) {
               ) : (
                 <li>
                   <a href="https://opensea.io/collection/degengang" target="__blank">
-                    <Button title="CONNECT" />
+                    <Button title="OPENSEA" />
                   </a>
                 </li>
               )}
@@ -207,6 +207,9 @@ function Index({ setmenu, menu }) {
             </li>
             <li className="text-white">
                 <a href="/barfights">BAR FIGHTS</a>
+            </li>
+            <li className="text-white">
+              <a href="/claim">claim</a>
             </li>
             <li className="text-white">
                 <a href="http://degengangmerch.com">MERCH</a>
