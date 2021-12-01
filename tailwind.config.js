@@ -30,7 +30,8 @@ module.exports = {
         "220px": "220px",
         "227px": "227px",
         "233px": "233px",
-        "800px": "800px"
+        "800px": "800px",
+        "1024px": "1024px"
           },
       width: {
         "20rem": "20rem",
