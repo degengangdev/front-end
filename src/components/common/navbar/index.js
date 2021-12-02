@@ -95,9 +95,6 @@ function Index({ setmenu, menu }) {
           <li className="text-sm xl:text-small 2xl:text-small -mt-2 hidden lg:flex items-center md:ml-6 ">
             <ul className="flex items-center space-x-4 2xl:space-x-6 font-rob pt-2 ">
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/#about">about</a>
-              </li>
-              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/dcred">$dcred</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
@@ -199,9 +196,6 @@ function Index({ setmenu, menu }) {
             </button>
           </div>
           <ul className="flex flex-col text-xs pl-8 space-y-4 f-f-r uppercase">
-            <li className="text-white transition duration-150 ease-in ">
-                <a href="/#home">about</a>
-            </li>
             <li className="text-white">
                 <a href="/dcred">$decred</a>
             </li>

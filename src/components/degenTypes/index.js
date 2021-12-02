@@ -7,15 +7,15 @@ function Index() {
         <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-1 text-white f-f-r">
           <p className="text-white text-large font-wraith text-2xl text-center">Types of Degen</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0  max-w-screen-lg pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12  max-w-screen-lg pt-8">
             <div className="flex flex-col items-center justify-center mb-12 pt-8">
-              <span className="text-white font-wraith text-md">Genesis</span>
+              <span className="text-white f-r-r text-md">Genesis</span>
               <img
                 alt=""
-                className="mt-4"
+                className="mt-4 xl:w-96"
                 src="images/genesis.png"
               />
-              <p className="ml-16 mr-16 mt-6">
+              <p className="mt-6 w-1/2 sm:w-4/5 xl:w-80">
                 OG Degens. These Degens were here from the start and are the only ones that can
                 generate 10 $DCRED a day.
 
@@ -23,13 +23,13 @@ function Index() {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center mb-12 pt-8">
-              <span className="text-white font-wraith text-md">Pixel Degens</span>
+              <span className="text-white text-md f-r-r">Pixel Degens</span>
               <img
                 alt=""
-                className="mt-4"
+                className="mt-4 xl:w-96"
                 src="images/pixel.png"
               />
-              <p className="ml-16 mr-16 mt-6">
+              <p className="mt-6 w-1/2 sm:w-4/5 xl:w-80">
                 Pixel Degens lurk on the
                 Immutable X platform and like to fuck shit up in the bar.
 
@@ -37,13 +37,13 @@ function Index() {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center mb-12 place-items-start">
-              <span className="text-white font-wraith text-md">Beast Degens</span>
+              <span className="text-white text-md f-r-r">Beast Degens</span>
               <img
                 alt=""
-                className="mt-4"
+                className="mt-4 xl:w-96"
                 src="images/beast.png"
               />
-              <p className="ml-16 mr-16 mt-6">
+              <p className="mt-6 w-1/2 sm:w-4/5 xl:w-80">
                 A science experiment that went horribly wrong and now we have beasts to contend with...
 
                 There is still much to learn of these creatures and their powers.
