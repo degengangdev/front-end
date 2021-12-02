@@ -59,13 +59,13 @@ function AnimatedHero() {
     <>
       <div className="pt-12">
         <video id="background-video" className="w-full" autoPlay loop muted poster="images/home-bg.png">
-          <source src="images/home-bg.mp4" type="video/mp4" />
+          <source src="images/home-bg-hd.mp4" type="video/mp4" />
         </video>
         <div className="overlay">
           <div className="xsm:absolute w-full flex flex-col items-center justify-center mx-auto text-white f-f-r xmd:pt-24 xlg:pt-36 xxl:pt-80 pl-4 pr-4">
             <img className="pt-16 md:pt-0 sm:w-2/3 xl:w-1/2 z-20" src="images/DegenLargePinkLogo.png" alt="img" /><br />
-            <p className="pt-4 text-center font-bold z-20">The biggest bunch of degenerates on the blockchain.</p>
-            <p className="pt-4 text-center text-lg font-bold z-20">7,000 strong and ready to take over.</p>
+            <p className="pt-4 text-center z-20">The biggest bunch of degenerates on the blockchain.</p>
+            <p className="pt-4 text-center text-lg z-20">7,000 strong and ready to take over.</p>
             <a className="mt-16 mb-12 " href="http://discord.gg/VyxVr4byxH" target="__blank">
               <Button title="LFG" className="w-3/4" />
             </a>

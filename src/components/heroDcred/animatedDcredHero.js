@@ -59,7 +59,7 @@ function AnimatedDcredHero() {
     <>
       <div className="pt-12">
         <video id="background-video" className="w-full" autoPlay loop muted poster="images/dcred-bg.png">
-          <source src="images/dcred-bg.mp4" type="video/mp4" />
+          <source src="images/dcred-bg-hd.mp4" type="video/mp4" />
         </video>
         <div className="overlay">
           <div className="w-full flex flex-col items-end justify-center mx-auto text-white f-f-r pl-4 pr-4 lg:pr-36 z-20">
