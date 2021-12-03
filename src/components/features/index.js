@@ -75,40 +75,47 @@ function Index() {
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-2  max-w-screen-lg pt-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8  max-w-screen-lg pt-24">
           <div >
             <img
               alt=""
-              className=""
+              className="w-36"
               src="images/OverlordDegen.png"
             />
           </div>
           <div >
             <img
               alt=""
-              className=""
+              className="w-36"
               src="images/DrDegen.png"
             />
           </div>
           <div >
             <img
               alt=""
-              className=""
+              className="w-36"
               src="images/FrugLife.png"
             />
           </div>
           <div >
             <img
               alt=""
-              className=""
+              className="w-36"
               src="images/SkeletonPrince.png"
             />
           </div>
           <div >
             <img
               alt=""
-              className=""
+              className="w-36"
               src="images/WinnDix.png"
+            />
+          </div>
+          <div >
+            <img
+              alt=""
+              className="w-36"
+              src="images/thebull.jpg"
             />
           </div>
         </div>

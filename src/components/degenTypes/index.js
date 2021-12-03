@@ -15,7 +15,7 @@ function Index() {
                 className="mt-4 xl:w-96"
                 src="images/genesis.png"
               />
-              <p className="mt-6 w-1/2 sm:w-4/5 xl:w-80">
+              <p className="mt-6 w-3/4 sm:w-4/5 xl:w-80">
                 OG Degens. These Degens were here from the start and are the only ones that can
                 generate 10 $DCRED a day.
 
@@ -29,7 +29,7 @@ function Index() {
                 className="mt-4 xl:w-96"
                 src="images/pixel.png"
               />
-              <p className="mt-6 w-1/2 sm:w-4/5 xl:w-80">
+              <p className="mt-6 w-3/4 sm:w-4/5 xl:w-80">
                 Pixel Degens lurk on the
                 Immutable X platform and like to fuck shit up in the bar.
 
@@ -43,7 +43,7 @@ function Index() {
                 className="mt-4 xl:w-96"
                 src="images/beast.png"
               />
-              <p className="mt-6 w-1/2 sm:w-4/5 xl:w-80">
+              <p className="mt-6 w-3/4 sm:w-4/5 xl:w-80">
                 A science experiment that went horribly wrong and now we have beasts to contend with...
 
                 There is still much to learn of these creatures and their powers.

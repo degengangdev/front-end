@@ -11,11 +11,7 @@ function Index() {
                 degen bar
               </p>
               <p className="text-base md:text-lg lg:text-2xl f-f-r mt-8 md:mt-10 lg:mt-14 xl:mt-20 text-center text-white">
-                Your DEGEN GANG NFT grants you exclusive entry to our virtual
-                DEGEN BAR. From here you will enter our virtual reality
-                metaverse on NetVRk, where you can get into BAR FIGHTS (NFT
-                Play-to-Earn Gaming), hang out with degens, access the merch
-                store and much much more.
+                The Degen Bar is exclusive to Degen Gang NFT holders. From here you can hang out with fellow degens, play games (bar fights, poker, slots and more), access the VIP lounge, attend live shows and events and more.
               </p>
             </div>
           </div>
