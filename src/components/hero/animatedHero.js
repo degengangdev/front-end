@@ -57,7 +57,7 @@ function AnimatedHero() {
   }, [timestamp]);
   return (
     <>
-      <div className="pt-12">
+      <div className="pt-12 mb-20">
         <video id="background-video" className="w-full" autoPlay loop muted poster="images/home-bg.png">
           <source src="images/home-bg-hd.mp4" type="video/mp4" />
         </video>

@@ -10,7 +10,7 @@ function AnimatedBarFightHero() {
         </video>
         <div className="overlay">
           <div className="w-full flex flex-col items-center justify-center mx-auto text-white f-f-r pl-4 pr-4 z20">
-            <img className="md:pt-0 sm:w-2/3 xl:w-1/2 z-20" src="images/BARFIGHTS-TrasparentBKG.png" alt="img" /><br />
+            <img className="md:pt-0 sm:w-1/2 xl:w-30rem z-20" src="images/BARFIGHTS-TrasparentBKG.png" alt="img" /><br />
             <p className="pt-4 text-center z-20">The First Virtual Fight Club for Web 3.0</p>
           </div>
         </div>
