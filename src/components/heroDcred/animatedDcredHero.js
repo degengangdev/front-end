@@ -68,14 +68,14 @@ function AnimatedDcredHero() {
                 <span className="font-wraith z-20">What is $Dcred?</span>
                 <span className="mt-2 lg:pt-6 text-center z-20">Degen Street Cred, $DCRED, is our governance token that will give degens the power to influence decisions and decide how the ecosystem should further develop.</span>
                 <span className="text-xs lg:text-sm z-20">
-                  <p className="mt-4 lg:pt-8 z-20">$DCRED CONTRACT: 0xb2aF...L7V4</p>
-                  <p className="mt-2 z-20">CLAIMABLE AMOUNT: 10</p>
-                  <p className="mt-2 z-20">CURRENT STASH: 450</p>
-                  <p className="mt-2 z-20">WALLET: 0xb5aG...H7B6</p>
+                  <p className="mt-4 lg:pt-8 z-20 font-wraith">Coming Soon</p>
+                {/*  <p className="mt-2 z-20">CLAIMABLE AMOUNT: 10</p>*/}
+                {/*  <p className="mt-2 z-20">CURRENT STASH: 450</p>*/}
+                {/*  <p className="mt-2 z-20">WALLET: 0xb5aG...H7B6</p>*/}
                 </span>
-                <p className="mt-4 md:pt-6 font-wraith">
-                  <ImxClaimButton />
-                </p>
+              {/*  <p className="mt-4 md:pt-6 font-wraith">*/}
+              {/*    <ImxClaimButton />*/}
+              {/*  </p>*/}
               </div>
             </div>
           </div>
