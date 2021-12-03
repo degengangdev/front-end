@@ -91,7 +91,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-video {
+video, .vimeoplayer {
     position: absolute;
     top: 60px;
     left: 0;

@@ -17,7 +17,7 @@ function Index() {
             <img
               alt=""
               className="mt-4 md:w-3/4"
-              src="images/degenbar.jpg"
+              src="images/degenBar.jpg"
             />
             <p className="ml-4 mr-4 lg:ml-16 lg:mr-16 mt-6">
               OG Degens. These Degens were here from the start and are the only ones that can
