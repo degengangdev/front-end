@@ -4,7 +4,7 @@ import Vimeo from '@u-wave/react-vimeo';
 function AnimatedBarFightHero() {
   return (
     <>
-      <div className="pt-12">
+      <div className="pt-12 mb-2">
         <video id="background-video" className="w-full" autoPlay loop muted poster="images/barfights-bg.png">
           <source src="images/barfights-bg.mp4" type="video/mp4" />
         </video>

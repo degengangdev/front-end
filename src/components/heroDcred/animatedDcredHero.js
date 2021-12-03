@@ -57,7 +57,7 @@ function AnimatedDcredHero() {
   }, [timestamp]);
   return (
     <>
-      <div className="pt-12 mb-16 md:mb-0">
+      <div className="pt-12 mb-6">
         <video id="background-video" className="w-full" autoPlay loop muted poster="images/dcred-bg.png">
           <source src="images/dcred-bg-hd.mp4" type="video/mp4" />
         </video>
