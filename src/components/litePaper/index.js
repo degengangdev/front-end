@@ -14,7 +14,7 @@ function Index() {
           <div className="px-4 flex flex-col items-center md:items-baseline text-center md:text-left justify-center md:justify-left mx-auto ">
             <img
               className="lg:w-2/5 lg:pr-5 xl:w-4/5 xl:pr-10"
-              src="/images/DEGEN-GANG-LOGO 1.png"
+              src="/images/logo.png"
               alt=""
             />
             <p className="text-white mt-8">
@@ -33,7 +33,7 @@ function Index() {
           </div>
           <div className="flex flex-col items-center justify-center px-4">
             <img
-              className="w-267px lg:pr-5  xl:pr-10 pb-24"
+              className="w-267px md:w-336px lg:pr-5  xl:pr-10 pb-24"
               src="/images/degens-rotate.gif"
               alt=""
             />

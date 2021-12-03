@@ -25,7 +25,7 @@ function Index() {
           </div>
           <div className="md:col-span-3 md:mt-20 flex flex-col items-center justify-center">
             <img
-              className="mt-8 w-56 xl:pr-10 "
+              className="mt-8 w-72 xl:pr-10 "
               src="/images/phase1.png"
               alt=""
             />
@@ -34,7 +34,7 @@ function Index() {
         <div className="grid grid-cols-1 md:grid-cols-7 gap-8  pl-0 md:pl-8 max-w-screen-lg pt-16">
           <div className="md:col-span-3 mt-20md:mt-20 flex flex-col items-center justify-center hidden md:block">
             <img
-              className="mt-6 w-56 lg:pr-5 xl:pr-10 lg:ml-24 mt-16"
+              className="mt-6 w-72 lg:pr-5 xl:pr-10 lg:ml-24 mt-16"
               src="/images/phase2.png"
               alt=""
             />
@@ -52,7 +52,7 @@ function Index() {
           </div>
           <div className="md:col-span-3 md:mt-20 flex flex-col items-center justify-center block md:hidden">
             <img
-              className="w-56 mt-6 lg:pr-5 xl:pr-10"
+              className="w-72 mt-6 lg:pr-5 xl:pr-10"
               src="/images/phase2.png"
               alt=""
             />
@@ -72,7 +72,7 @@ function Index() {
           </div>
           <div className="md:col-span-3 md:mt-20 flex flex-col items-center justify-center">
             <img
-              className="mt-6 w-56 lg:pr-5 xl:pr-10 "
+              className="mt-6 w-72 lg:pr-5 xl:pr-10 "
               src="/images/phase3.png"
               alt=""
             />
@@ -81,7 +81,7 @@ function Index() {
         <div className="grid grid-cols-1 md:grid-cols-7 gap-8  pl-0 md:pl-8 max-w-screen-lg">
           <div className="md:col-span-3 md:mt-20 flex flex-col items-center justify-center hidden md:block  lg:ml-24">
             <img
-              className="mt-20 w-56 lg:pr-5 xl:pr-10 -mt-2"
+              className="mt-20 w-72 lg:pr-5 xl:pr-10 -mt-2"
               src="/images/phase4.png"
               alt=""
             />
@@ -99,7 +99,7 @@ function Index() {
           </div>
           <div className="md:col-span-3 flex flex-col items-center justify-center block md:hidden">
             <img
-              className="mt-20 w-56 lg:pr-5 xl:pr-10"
+              className="mt-20 w-72 lg:pr-5 xl:pr-10"
               src="/images/phase4.png"
               alt=""
             />
