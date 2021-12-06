@@ -9,7 +9,6 @@ export default function ClaimPage() {
   return (
     <>
       <ClaimPageHero />
-      <UnsoldDegens />
       <ClaimPageLitePaper />
       <Join />
       <Footer />
