@@ -7,7 +7,7 @@ function Index() {
     <div
       id="litePaper"
       style={{ backgroundImage: `url(images/LitePaperBackground.png)` }}
-      className="bg-cover bg-center h-full w-full py-16 md:py-24 xl:py-32"
+      className="bg-cover bg-center h-full w-full py-16 md:py-24 xl:py-32 litepapersection"
     >
       <div className="flex flex-col items-center justify-center mx-auto container p-1 pb-8 text-white f-f-r">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pl-0 md:pl-8 max-w-screen-lg ">

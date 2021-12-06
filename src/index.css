@@ -116,6 +116,10 @@ video, .vimeoplayer {
     justify-content: center;
 }
 
+.dcred-overlay {
+    margin-top: 0;
+}
+
 @media screen and (min-width: 480px) {
     video {
         height: 640px;
@@ -123,6 +127,9 @@ video, .vimeoplayer {
 
     .overlay {
         min-height: 640px;
+    }
+    .dcred-overlay {
+        margin-top: -50px;
     }
 }
 @media screen and (min-width: 1024px) {
@@ -132,6 +139,9 @@ video, .vimeoplayer {
 
     .overlay {
         min-height: 900px;
+    }
+    .dcred-overlay {
+        margin-top: -100px;
     }
 }
 
