@@ -197,7 +197,7 @@ function Index({ setmenu, menu }) {
           </div>
           <ul className="flex flex-col text-xs pl-8 space-y-4 f-f-r uppercase">
             <li className="text-white">
-                <a href="/dcred">$decred</a>
+                <a href="/dcred">$dcred</a>
             </li>
             <li className="text-white">
                 <a href="/barfights">BAR FIGHTS</a>

@@ -76,7 +76,7 @@ function Index({ setmenu, menu }) {
                 <a href="/#about">about</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/dcred">$decred</a>
+                <a href="/dcred">$dcred</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="/barfights">bar fights</a>
@@ -168,7 +168,7 @@ function Index({ setmenu, menu }) {
               <a href="/#home">about</a>
             </li>
             <li className="text-white">
-              <a href="/decred">$dcred</a>
+              <a href="/dcred">$dcred</a>
             </li>
             <li className="text-white">
               <a href="/barfights">BAR FIGHTS</a>
