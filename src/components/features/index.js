@@ -82,6 +82,7 @@ function Index() {
               className="w-36"
               src="images/OverlordDegen.png"
             />
+            <p className="w-36 mt-2 font-thin text-center">Overlord Degen</p>
           </div>
           <div >
             <img
@@ -89,6 +90,7 @@ function Index() {
               className="w-36"
               src="images/DrDegen.png"
             />
+            <p className="w-36 mt-2 font-thin text-center">Dr Degen</p>
           </div>
           <div >
             <img
@@ -96,6 +98,7 @@ function Index() {
               className="w-36"
               src="images/FrugLife.png"
             />
+            <p className="w-36 mt-2 font-thin text-center">Frug Life</p>
           </div>
           <div >
             <img
@@ -103,6 +106,7 @@ function Index() {
               className="w-36"
               src="images/SkeletonPrince.png"
             />
+            <p className="w-36 mt-2 font-thin text-center">Skeleton Prince</p>
           </div>
           <div >
             <img
@@ -110,6 +114,7 @@ function Index() {
               className="w-36"
               src="images/WinnDix.png"
             />
+            <p className="w-36 mt-2 font-thin text-center">WinnDix</p>
           </div>
           <div >
             <img
@@ -117,6 +122,23 @@ function Index() {
               className="w-36"
               src="images/thebull.jpg"
             />
+            <p className="w-36 mt-2 font-thin text-center">The Bull</p>
+          </div>
+          <div >
+            <img
+              alt=""
+              className="w-36"
+              src="images/thelion.jpeg"
+            />
+            <p className="w-36 mt-2 font-thin text-center">The Lion</p>
+          </div>
+          <div >
+            <img
+              alt=""
+              className="w-36"
+              src="images/nickfury.jpg"
+            />
+            <p className="w-36 mt-2 font-thin text-center">Nick Fury</p>
           </div>
         </div>
 
