@@ -21,7 +21,7 @@ function AnimatedHero() {
         <div className="overlay">
           <div className="w-full flex flex-col items-center justify-center mx-auto text-white f-f-r pl-4 pr-4">
             <img className="pt-16 md:pt-0 sm:w-2/3 xl:w-1/2 z-20" src="images/DegenLargePinkLogo.png" alt="img" /><br />
-            <div className="p-2 backdrop-filter backdrop-blur-lg">
+            <div className="p-2 backdrop-filter backdrop-blur">
               <p className="pt-4 text-center text-lg z-20">The biggest bunch of degenerates on the blockchain.</p>
               <p className="pt-4 text-center text-lg z-20">7,000 strong and ready to take over.</p>
             </div>

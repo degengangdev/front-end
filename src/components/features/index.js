@@ -20,10 +20,7 @@ function Index() {
               src="images/degen-bar.png"
             />
             <p className="mt-6 w-80 md:w-64 h-180px px-2">
-              OG Degens. These Degens were here from the start and are the only ones that can
-              generate 10 $DCRED a day.
-
-              $DCRED can be used to name a Degen, write a lore for them, or even breed a beast...
+              The Degen Bar is exclusive to Degen Gang NFT holders. From here you can hang out with fellow degens, play games (bar fights, poker, slots and more), access the VIP lounge, attend live shows and events and more.
             </p>
           </div>
           <div className="flex flex-col items-center justify-center mb-12 ">
@@ -34,10 +31,7 @@ function Index() {
               src="images/rewards.png"
             />
             <p className="mt-6 w-80 md:w-64 h-180px px-2">
-              Pixel Degens lurk on the
-              Immutable X platform and like to fuck shit up in the bar.
-
-              These angry degens can be used in BAR FIGHTS to earn you $DEGEN for taking names and kicking ass.
+              The ecosystem is fundamentally designed to reward Degen Gang NFT holders through token yielding, airdrops, exclusive NFTs and much much more.
             </p>
           </div>
           <div className="flex flex-col items-center justify-center mb-12 pt-6">
@@ -48,11 +42,7 @@ function Index() {
               src="images/barfights.png"
             />
             <p className="mt-6 w-80 md:w-64 h-180px px-2">
-              A science experiment that went horribly wrong and now we have beasts to contend with...
-
-              There is still much to learn of these creatures and their powers.
-
-
+              Bar Fights is a first of its kind arcade NFT game, where you can use your Pixel Degen to fight others and earn our degen dolla!
             </p>
             <div className="pt-6" />
           </div>
@@ -75,70 +65,70 @@ function Index() {
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8  max-w-screen-lg pt-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8  max-w-screen-xl pt-24">
           <div >
             <img
               alt=""
-              className="w-36"
+              className="w-56"
               src="images/OverlordDegen.png"
             />
-            <p className="w-36 mt-2 font-thin text-center">Overlord Degen</p>
+            <p className="w-56 mt-2 font-thin text-center">Overlord Degen</p>
           </div>
           <div >
             <img
               alt=""
-              className="w-36"
+              className="w-56"
               src="images/DrDegen.png"
             />
-            <p className="w-36 mt-2 font-thin text-center">Dr Degen</p>
+            <p className="w-56 mt-2 font-thin text-center">Dr Degen</p>
           </div>
           <div >
             <img
               alt=""
-              className="w-36"
+              className="w-56"
               src="images/FrugLife.png"
             />
-            <p className="w-36 mt-2 font-thin text-center">Frug Life</p>
+            <p className="w-56 mt-2 font-thin text-center">Frug Life</p>
           </div>
           <div >
             <img
               alt=""
-              className="w-36"
+              className="w-56"
               src="images/SkeletonPrince.png"
             />
-            <p className="w-36 mt-2 font-thin text-center">Skeleton Prince</p>
+            <p className="w-56 mt-2 font-thin text-center">Skeleton Prince</p>
           </div>
           <div >
             <img
               alt=""
-              className="w-36"
+              className="w-56"
               src="images/WinnDix.png"
             />
-            <p className="w-36 mt-2 font-thin text-center">WinnDix</p>
+            <p className="w-56 mt-2 font-thin text-center">WinnDix</p>
           </div>
           <div >
             <img
               alt=""
-              className="w-36"
+              className="w-56"
               src="images/thebull.jpg"
             />
-            <p className="w-36 mt-2 font-thin text-center">The Bull</p>
+            <p className="w-56 mt-2 font-thin text-center">The Bull</p>
           </div>
           <div >
             <img
               alt=""
-              className="w-36"
+              className="w-56"
               src="images/thelion.jpeg"
             />
-            <p className="w-36 mt-2 font-thin text-center">The Lion</p>
+            <p className="w-56 mt-2 font-thin text-center">The Lion</p>
           </div>
           <div >
             <img
               alt=""
-              className="w-36"
+              className="w-56"
               src="images/nickfury.jpg"
             />
-            <p className="w-36 mt-2 font-thin text-center">Nick Fury</p>
+            <p className="w-56 mt-2 font-thin text-center">Nick Fury</p>
           </div>
         </div>
 
