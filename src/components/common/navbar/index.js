@@ -61,10 +61,10 @@ function Index({ setmenu, menu }) {
     <>
       <nav className="w-full pt-2 mb-8 fixed bg-black z-50 pb-4">
         <ul className="flex items-left lg:justify-around pl-4">
-          <li className="pt-2 w-3/4 lg:w-72 flex justify-center">
-            <Link to="/">
+          <li className="pt-2 w-full sm:w-96 flex justify-center ">
+            <Link className="w-full" to="/">
               <img
-                className="sm:w-72"
+                className="w-2/3 sm:w-72 sm:ml-24"
                 src="images/DEGEN-GANG-LOGO 1.png"
                 alt="logo"
               />
