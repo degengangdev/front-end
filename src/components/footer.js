@@ -85,9 +85,6 @@ function Index({ setmenu, menu }) {
                 <a href="http://degengangmerch.com" target="_blank" rel="noreferrer">merch</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/beasts">beasts</a>
-              </li>
-              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="https://degenpacman.000webhostapp.com/index.html" target="_blank" rel="noreferrer">Pacman</a>
               </li>
             </ul>
@@ -175,9 +172,6 @@ function Index({ setmenu, menu }) {
             </li>
             <li className="text-white">
               <a href="http://degengangmerch.com">MERCH</a>
-            </li>
-            <li className="text-white">
-              <a href="/beasts">Beasts</a>
             </li>
             <li className="text-white">
               <a href="https://degenpacman.000webhostapp.com/index.html" target="_blank" rel="noreferrer">Pacman</a>

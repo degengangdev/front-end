@@ -70,7 +70,7 @@ function Index() {
             <img
               alt=""
               className="w-56"
-              src="images/OverlordDegen.png"
+              src="images/overlord.jpeg"
             />
             <p className="w-56 mt-2 font-thin text-center">Overlord Degen</p>
           </div>
@@ -78,7 +78,7 @@ function Index() {
             <img
               alt=""
               className="w-56"
-              src="images/DrDegen.png"
+              src="images/dr-degen.jpg"
             />
             <p className="w-56 mt-2 font-thin text-center">Dr Degen</p>
           </div>
@@ -86,7 +86,7 @@ function Index() {
             <img
               alt=""
               className="w-56"
-              src="images/FrugLife.png"
+              src="images/FrugLife.jpg"
             />
             <p className="w-56 mt-2 font-thin text-center">Frug Life</p>
           </div>
@@ -94,7 +94,7 @@ function Index() {
             <img
               alt=""
               className="w-56"
-              src="images/SkeletonPrince.png"
+              src="images/skeleton-prince.jpg"
             />
             <p className="w-56 mt-2 font-thin text-center">Skeleton Prince</p>
           </div>
@@ -102,7 +102,7 @@ function Index() {
             <img
               alt=""
               className="w-56"
-              src="images/WinnDix.png"
+              src="images/winndix.jpg"
             />
             <p className="w-56 mt-2 font-thin text-center">WinnDix</p>
           </div>

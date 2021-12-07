@@ -17,9 +17,7 @@ function Index() {
               />
               <p className="mt-6 w-64 h-180px px-2">
                 OG Degens. These Degens were here from the start and are the only ones that can
-                generate 10 $DCRED a day.
-
-                $DCRED can be used to name a Degen, write a lore for them, or even breed a beast...
+                generate $DCRED daily. $DCRED can be used to name a Degen, write a lore for them, or even breed a beast...
               </p>
             </div>
             <div className="flex flex-col items-center justify-center mb-12">
