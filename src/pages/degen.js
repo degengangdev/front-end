@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Hero from "../components/hero/index";
+import MyPixelDegens from "../components/myInventory/myPixelDegens";
 import Features from "../components/features";
 import Join from "../components/join";
 import Footer from "../components/footer";
@@ -16,14 +16,7 @@ export default function Degen() {
   return (
       <>
       <Navbar menu={menu} setmenu={setmenu} />
-      <AnimatedHero />
-      <SoldOut />
-      <LitePaper />
-      <DegenTypes />
-      <RoadMap />
-      <Features />
-      <Join />
-      <Footer />
+      <MyPixelDegens />
     </>
   );
 }
