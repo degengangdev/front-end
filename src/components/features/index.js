@@ -24,7 +24,7 @@ function Index() {
             </p>
           </div>
           <div className="flex flex-col items-center justify-center mb-12 ">
-            <span className="text-white text-md f-r-r uppercase text-2xl md:text-3xl">Pixel Degens</span>
+            <span className="text-white text-md f-r-r uppercase text-2xl md:text-3xl">Rewards</span>
             <img
               alt=""
               className="mt-4"
