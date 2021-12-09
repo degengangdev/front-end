@@ -1,8 +1,10 @@
 import { ImmutableXClient, Link } from '@imtbl/imx-sdk';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import axios from "axios";
 import { linkAddress, baseURL, bypassCheckApi, bypassClaimApi, imxApiAddress } from '../ImmutableX/imxConfig'
 import Button from "../common/button";
+import WalletContext from "../context/walletContext";
+
 
 
 axios.defaults.baseURL = baseURL;
@@ -22,12 +24,15 @@ const MyPixelDegens = (props) => {
   //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
 
-  const updateWallet = (walletId) => {
+  const walletDetails = useContext(WalletContext);
+
+  const updateWallet = (newWalletId) => {
+    walletDetails.setWalletId(newWalletId);
     var walletString = "";
-    setWallet(walletId);
-    if (walletId.length > 10) {
+    setWallet(newWalletId);
+    if (newWalletId.length > 10) {
       //Check if we can make a claim
-      checkValidClaim(walletId);
+      checkValidClaim(newWalletId);
     }
     else {
       setCanClaim(0);
@@ -233,7 +238,7 @@ const MyPixelDegens = (props) => {
   }
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mx-auto text-white f-f-r pl-4 pr-4 pt-48">
+    <div className="w-full flex flex-col items-center justify-center mx-auto text-white f-f-r pl-4 pr-4 pt-8">
       {
         wallet ?
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">

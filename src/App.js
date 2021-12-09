@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { connect } from "react-redux";
 import {
   BrowserRouter as Router,
@@ -11,6 +11,7 @@ import Barfight from "./pages/barFight";
 import DcredPage from "./pages/dcredPage";
 import BeastsPage from "./pages/beastsPage";
 import ClaimPage from "./pages/claimPage";
+import WalletContext from "./components/context/walletContext";
 
 import {
   setAddress,
@@ -29,8 +30,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     window.web3 = null;
+    this.state = { walletId: "appdefault", setWalletId: this.setWalletId }
     // modern broswers
-      if (typeof window.ethereum !== 'undefined') {
+    if (typeof window.ethereum !== 'undefined') {
       window.web3 = new Web3(window.ethereum);
       window.web3.eth.net.getId((err, netId) => {
         window.ethereum.request({ method: 'eth_accounts' }).then(async (accounts) => {
@@ -68,7 +70,7 @@ class App extends Component {
           // NotificationManager.error(`Wrong network`);
           window.web3.currentProvider.request({
             method: "wallet_switchEthereumChain",
-            params: [{chainId: window.web3.utils.numberToHex(parseInt(config.networkId, 10))}],
+            params: [{ chainId: window.web3.utils.numberToHex(parseInt(config.networkId, 10)) }],
           });
         }
 
@@ -101,7 +103,7 @@ class App extends Component {
     if (config.networkId !== networkVersion && window.web3) {
       window.web3.currentProvider.request({
         method: "wallet_switchEthereumChain",
-        params: [{chainId: window.web3.utils.numberToHex(parseInt(config.networkId, 10))}],
+        params: [{ chainId: window.web3.utils.numberToHex(parseInt(config.networkId, 10)) }],
       });
     }
     switch (networkVersion) {
@@ -124,18 +126,24 @@ class App extends Component {
     }
   }
 
+  setWalletId = (newWalletId) => {
+    this.setState({ walletId: newWalletId });
+  };
+
   render() {
     return (
       <div>
-        <Router>
-          <Switch>
-            <Route path="/" component={Degen} exact />
-            <Route path="/dcred" component={DcredPage} exact />
-            <Route path="/barfights" component={Barfight} exact />
-            <Route path="/claim" component={ClaimPage} exact />
-          </Switch>
-        </Router>
-        <NotificationContainer />
+        <WalletContext.Provider value={{ walletId: this.state.walletId, setWalletId: this.state.setWalletId }} >
+          <Router>
+            <Switch>
+              <Route path="/" component={Degen} exact />
+              <Route path="/dcred" component={DcredPage} exact />
+              <Route path="/barfights" component={Barfight} exact />
+              <Route path="/claim" component={ClaimPage} exact />
+            </Switch>
+          </Router>
+          <NotificationContainer />
+        </WalletContext.Provider>
       </div>
     );
   }
