@@ -61,7 +61,6 @@ function Index() {
           <p className="ml-16 mr-16 text-center mt-8">
             With extensive backgrounds in marketing, business strategy, tech, finance and the art
             sectors, Degen Gang is poised to become a potential leader on the charge into the NFT P2E gaming space.
-            There is still much to learn of these creatures and their powers.
           </p>
         </div>
 
@@ -128,7 +127,7 @@ function Index() {
               className="w-56"
               src="images/nickfury.jpg"
             />
-            <p className="w-56 mt-2 font-thin text-center">Nick Fury</p>
+            <p className="w-56 mt-2 font-thin text-center">Degen Fury</p>
           </div>
         </div>
 
