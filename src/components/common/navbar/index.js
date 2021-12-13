@@ -104,6 +104,9 @@ function Index({ setmenu, menu }) {
                 <a href="/claim">claim</a>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
+                <Link className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out" to="/beasts">Beasts</Link>
+              </li>
+              <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="http://degengangmerch.com" target="_blank" rel="noreferrer">merch</a>
               </li>
             </ul>

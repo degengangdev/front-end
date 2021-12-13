@@ -9,6 +9,8 @@ import LitePaper from "../components/litePaper";
 import RoadMap from "../components/roadmap";
 import Navbar from "../components/common/navbar";
 import AnimatedHero from "../components/hero/animatedHero"
+import TestWalletContext from "../components/claimPage/testWalletContext";
+
 
 export default function Degen() {
     const [menu, setmenu] = useState(false);
@@ -16,7 +18,7 @@ export default function Degen() {
   return (
       <>
       <Navbar menu={menu} setmenu={setmenu} />
-      <AnimatedHero />
+      <TestWalletContext />
       <SoldOut />
       <LitePaper />
       <DegenTypes />
