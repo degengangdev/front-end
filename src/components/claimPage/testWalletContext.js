@@ -1,18 +1,24 @@
 import React, { useState, useContext } from 'react';
-import { ContextProvider, MyContext } from "../providers/contextProvider";
+import { WalletContext } from "../providers/walletContextProvider";
 
 export default function TestWalletContext() {
-  const [books, setbooks] = useContext(MyContext);
+  const [walletDetails, setWalletDetails] = useContext(WalletContext);
   return (
     <div className="pt-24">
-      <h1 className="text-white">{books.name}</h1>
-      <p className="text-white">{books.author}</p>
-      <p className="text-white">{books.serialNumber}</p>
-      <button className="text-white" onClick={() => { setbooks({
-          name: "Dune",
-          author: "Frank Herbert",
-          SerialNumber: 457
-        }) }}>Click me</button>
+      <h1 className="text-white">{walletDetails.walletId}</h1>
+      {walletDetails.walletId == "" ?
+        <button className="text-white" onClick={() => {
+          setWalletDetails({
+            walletId: "0x314....59fdf"
+          })
+        }}>Connect Wallet</button>
+        :
+        <button className="text-white" onClick={() => {
+          setWalletDetails({
+            walletId: ""
+          })
+        }}>Disconnect Wallet</button>
+      }
     </div>
   );
 }

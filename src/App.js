@@ -11,7 +11,7 @@ import Barfight from "./pages/barFight";
 import DcredPage from "./pages/dcredPage";
 import BeastsPage from "./pages/beastsPage";
 import ClaimPage from "./pages/claimPage";
-import ContextProvider from "../src/components/providers/contextProvider";
+import WalletContextProvider from "../src/components/providers/walletContextProvider";
 
 import {
   setAddress,
@@ -130,7 +130,7 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <ContextProvider>
+          <WalletContextProvider>
             <Switch>
               <Route path="/" component={Degen} exact />
               <Route path="/dcred" component={DcredPage} exact />
@@ -138,7 +138,7 @@ class App extends Component {
               <Route path="/claim" component={ClaimPage} exact />
               <Route path="/beasts" component={BeastsPage} exact />
             </Switch>
-          </ContextProvider>
+          </WalletContextProvider>
         </Router>
         <NotificationContainer />
       </div>
