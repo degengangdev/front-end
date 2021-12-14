@@ -73,10 +73,10 @@ function Index({ setmenu, menu }) {
           <li className="text-sm xl:text-small 2xl:text-small -mt-2 hidden lg:flex items-center md:ml-6 ">
             <ul className="flex items-center space-x-4 2xl:space-x-6 font-rob pt-2 ">
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/dcred">$dcred</a>
+                <Link to="/dcred">$dcred</Link>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
-                <a href="/barfights">bar fights</a>
+                <Link to="/barfights">bar fights</Link>
               </li>
               <li className="text-white uppercase hover:text-magenta transition-all duration-300 ease-in-out">
                 <a href="http://degengangmerch.com" target="_blank" rel="noreferrer">merch</a>
@@ -159,10 +159,10 @@ function Index({ setmenu, menu }) {
           </div>
           <ul className="flex flex-col text-xs pl-8 space-y-4 f-f-r uppercase">
             <li className="text-white">
-              <a href="/dcred">$dcred</a>
+              <Link to="/dcred">$dcred</Link>
             </li>
             <li className="text-white">
-              <a href="/barfights">BAR FIGHTS</a>
+              <Link to="/barfights">bar fights</Link>
             </li>
             <li className="text-white">
               <a href="http://degengangmerch.com">MERCH</a>
