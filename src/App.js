@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Degen from "./pages/degen";
-import ComingSoon from "./pages/comingSoon";
 import Barfight from "./pages/barFight";
 import DcredPage from "./pages/dcredPage";
-import BeastsPage from "./pages/beastsPage";
 import ClaimPage from "./pages/claimPage";
 import WalletContextProvider from "../src/components/providers/walletContextProvider";
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Hero from "../components/hero/index";
 import Features from "../components/features";
 import Join from "../components/join";
 import Footer from "../components/footer";
