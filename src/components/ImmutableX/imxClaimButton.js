@@ -1,36 +1,45 @@
 import { Link } from '@imtbl/imx-sdk';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import axios from "axios";
 import { linkAddress, baseURL, bypassCheckApi, bypassClaimApi } from './imxConfig'
 import Button from "../common/button";
 import CountDownTimer from '../common/countDown'
+import { WalletContext } from "../providers/walletContextProvider";
 
 axios.defaults.baseURL = baseURL;
 
 const ImxClaimButton = (props) => {
   const link = new Link(linkAddress);
-  const [wallet, setWallet] = useState("")
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState("")
-  const [canClaim, setCanClaim] = useState(0)
   const [showInventory, setshowInventory] = useState(false)
-  const [claimableTokens, setClaimableTokens] = useState("")
   const [claimsArePublic, setClaimsArePublic] = useState(false)
   //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
+
+  const [walletDetails, setWalletDetails] = useContext(WalletContext);
 
   const activationDate = new Date("2021-11-26T17:00Z");
 
   const updateWallet = (walletId) => {
     var walletString = "";
-    setWallet(walletId);
+    //Store the wallet details in the wallet context
+    setWalletDetails(prevState => ({
+      ...prevState,
+      walletId: walletId,
+      walletIdString: walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5)
+    }));
     if (walletId.length > 10) {
       //Check if we can make a claim
       checkValidClaim(walletId);
     }
     else {
-      setCanClaim(0);
-      props.onUpdate(walletString, 0, "", "");
+      setWalletDetails(prevState => ({
+        ...prevState,
+        numClaimablePixelDegens: 0,
+        claimablePixelDegens: "",
+        claimPixelDegensMessage: ""
+      }));
     }
   }
 
@@ -63,36 +72,51 @@ const ImxClaimButton = (props) => {
       setLoading(true)
       setshowInventory(false);
 
-      var walletString = walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5);
-      props.onUpdate(walletString, 0, "", "Checking eligibility ...");
+      setWalletDetails(prevState => ({
+        ...prevState,
+        numClaimablePixelDegens: 0,
+        claimablePixelDegens: "",
+        claimPixelDegensMessage: "Checking eligibility ..."
+      }));
 
       if (bypassCheckApi) {
-        setCanClaim(0);
+        setWalletDetails(prevState => ({
+          ...prevState,
+          numClaimablePixelDegens: 0,
+          claimablePixelDegens: "",
+          claimPixelDegensMessage: "Test airdropped already"
+        }));
         setshowInventory(true);
-        props.onUpdate(walletString, 0, "", "Test airdropped already");
         setLoading(false);
-        //        onClaimAllowed(walletString, ["1111", "2222", "3333", "4444", "5555"]);
         return;
       }
 
       axios.get('/transactions/check/' + walletId)
         .then((res) => {
           if (res.data.status != null && res.data.status == "Error") {
-            setCanClaim(0);
             if (res.data.message.includes("airdropped already")) {
               setshowInventory(true);
             }
-            props.onUpdate(walletString, 0, "", res.data.message);
+            setWalletDetails(prevState => ({
+              ...prevState,
+              numClaimablePixelDegens: 0,
+              claimablePixelDegens: "",
+              claimPixelDegensMessage: res.data.message
+            }));
             setLoading(false);
           }
           else if (res.data.tokens != null && res.data.tokens.length > 0) {
-            onClaimAllowed(walletString, res.data.tokens);
+            onClaimAllowed(res.data.tokens);
           }
         })
         .catch(err => {
           setLoading(false);
-          setCanClaim(0);
-          props.onUpdate(walletString, 0, "", err.toString());
+          setWalletDetails(prevState => ({
+            ...prevState,
+            numClaimablePixelDegens: 0,
+            claimablePixelDegens: "",
+            claimPixelDegensMessage: err.toString()
+          }));
         })
     }
     catch (err) {
@@ -101,13 +125,16 @@ const ImxClaimButton = (props) => {
     }
   }
 
-  const onClaimAllowed = (walletString, tokenArray) => {
+  const onClaimAllowed = (tokenArray) => {
     var claimableTokens = tokenArray.length;
     var availTokens = tokenArray.join(", ");
-    setCanClaim(claimableTokens);
-    setClaimableTokens(availTokens);
+    setWalletDetails(prevState => ({
+      ...prevState,
+      canClaimPixelDegens: claimableTokens,
+      claimablePixelDegens: availTokens,
+      claimPixelDegensMessage: ""
+    }));
     setLoading(false);
-    props.onUpdate(walletString, claimableTokens, availTokens, "");
   }
 
   const claim = () => {
@@ -115,31 +142,43 @@ const ImxClaimButton = (props) => {
       setErrorMessage("");
       setLoading(true);
       setshowInventory(false);
-      var walletString = wallet.substr(0, 5) + " ... " + wallet.substr(wallet.length - 5);
 
       if (bypassClaimApi) {
-        setCanClaim(0);
+        setWalletDetails(prevState => ({
+          ...prevState,
+          canClaimPixelDegens: 0,
+          claimablePixelDegens: "",
+          claimPixelDegensMessage: "Test error message"
+        }));
         setLoading(false);
-        props.onUpdate(walletString, 0, "", "Test Error Message");
-        //        onClaimSuccessful(walletString);
         return;
       }
 
-      axios.get('/transactions/claim/' + wallet)
+      axios.get('/transactions/claim/' + walletDetails.walletId)
         .then((res) => {
           if (res.data.status != null && res.data.status == "Error") {
-            setCanClaim(0);
+            setWalletDetails(prevState => ({
+              ...prevState,
+              canClaimPixelDegens: 0,
+              claimablePixelDegens: "",
+              claimPixelDegensMessage: res.data.message
+            }));
             setLoading(false);
-            props.onUpdate(walletString, 0, "", res.data.message);
           }
           else if (res.data.result != null && res.data.result.results != null) {
             //Claim completed - tell parent component there are no more claimable tokens
-            onClaimSuccessful(walletString);
+            onClaimSuccessful();
           }
         })
         .catch(err => {
           setLoading(false);
-          props.onUpdate(walletString, canClaim, claimableTokens, err.toString());
+          setWalletDetails(prevState => ({
+            ...prevState,
+            canClaimPixelDegens: 0,
+            claimablePixelDegens: "",
+            claimPixelDegensMessage: err.toString()
+          }));
+
         })
     }
     catch (err) {
@@ -149,61 +188,54 @@ const ImxClaimButton = (props) => {
   }
 
   const onClaimSuccessful = (walletString) => {
-    setCanClaim(0);
-    setClaimableTokens("");
+    setWalletDetails(prevState => ({
+      ...prevState,
+      canClaimPixelDegens: 0,
+      claimablePixelDegens: "",
+      claimPixelDegensMessage: "Congratulations!"
+    }));
+
     setshowInventory(true);
     setLoading(false);
-    props.onUpdate(walletString, 0, "", "Congratulations!");
   }
 
   return (
     <div>
       {
-        wallet ?
-          canClaim > 0 ?
+        walletDetails.walletId ?
+          walletDetails.numClaimablePixelDegens > 0 ?
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">
               <div className="col-span-1 justify-center">
-                <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
+                <Button tailwind="w-56" title="Disconnect" onClickhandler={logout}></Button>
               </div>
               <div className="col-span-1 justify-center">
-                {!loading &&
-                  <div className="mt-4 md:mt-0">
-                    <Button tailwind="w-44" title="Claim" onClickhandler={claim}></Button>
-                    <div>{response}</div>
-                  </div>
-                }
+                <div className="mt-4 md:mt-0">
+                  <Button tailwind="w-44" title="Claim" onClickhandler={claim}></Button>
+                  <div>{response}</div>
+                </div>
               </div>
             </div>
             :
             showInventory ?
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">
                 <div className="col-span-1 justify-center">
-                  <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
+                  <Button tailwind="w-56" title="Disconnect" onClickhandler={logout}></Button>
                 </div>
-                {!loading &&
-                  <div className="col-span-1 justify-center">
-                    <a href="https://market.x.immutable.com/inventory" target="__blank">
-                      <Button tailwind="w-44" title="Inventory" />
-                    </a>
-                  </div>
-                }
+                <div className="col-span-1 justify-center">
+                  <a href="https://market.x.immutable.com/inventory" target="__blank">
+                    <Button tailwind="w-44" title="Inventory" />
+                  </a>
+                </div>
               </div>
               :
               <div className="grid grid-cols-1 gap-y-2 gap-x-8">
                 <div className="col-span-1 justify-center">
-                  <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
+                  <Button tailwind="w-56" title="Disconnect" onClickhandler={logout}></Button>
                 </div>
               </div>
           :
           <div className="flex flex-col items-center justify-center">
-            {claimsArePublic ?
-              <Button tailwind="w-44 sm:w-72 text-xs" title="Connect Wallet" onClickhandler={setupAndLogin}></Button>
-              :
-              <>
-                <div className="text-white">Available in</div>
-                <CountDownTimer alarmDate={activationDate} onTimerExpired={setClaimsArePublic} />
-              </>
-            }
+            <Button tailwind="w-44 sm:w-72 text-xs" title="Connect Wallet" onClickhandler={setupAndLogin}></Button>
             <p className="text-white text-xs f-f-r justify-center mt-4">{errorMessage}</p>
           </div>
       }

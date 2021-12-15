@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import Vimeo from '@u-wave/react-vimeo';
-import ImxClaimButton from "../../components/ImmutableX/imxClaimButton";
 
 import useTotalSupply from "../../hooks/useTotalSupply";
 function AnimatedDcredHero() {

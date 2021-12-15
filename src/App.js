@@ -11,6 +11,7 @@ import Barfight from "./pages/barFight";
 import DcredPage from "./pages/dcredPage";
 import BeastsPage from "./pages/beastsPage";
 import ClaimPage from "./pages/claimPage";
+import WalletContextProvider from "../src/components/providers/walletContextProvider";
 
 import {
   setAddress,
@@ -30,7 +31,7 @@ class App extends Component {
     super(props);
     window.web3 = null;
     // modern broswers
-      if (typeof window.ethereum !== 'undefined') {
+    if (typeof window.ethereum !== 'undefined') {
       window.web3 = new Web3(window.ethereum);
       window.web3.eth.net.getId((err, netId) => {
         window.ethereum.request({ method: 'eth_accounts' }).then(async (accounts) => {
@@ -68,7 +69,7 @@ class App extends Component {
           // NotificationManager.error(`Wrong network`);
           window.web3.currentProvider.request({
             method: "wallet_switchEthereumChain",
-            params: [{chainId: window.web3.utils.numberToHex(parseInt(config.networkId, 10))}],
+            params: [{ chainId: window.web3.utils.numberToHex(parseInt(config.networkId, 10)) }],
           });
         }
 
@@ -101,7 +102,7 @@ class App extends Component {
     if (config.networkId !== networkVersion && window.web3) {
       window.web3.currentProvider.request({
         method: "wallet_switchEthereumChain",
-        params: [{chainId: window.web3.utils.numberToHex(parseInt(config.networkId, 10))}],
+        params: [{ chainId: window.web3.utils.numberToHex(parseInt(config.networkId, 10)) }],
       });
     }
     switch (networkVersion) {
@@ -128,12 +129,14 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <Switch>
-            <Route path="/" component={Degen} exact />
-            <Route path="/dcred" component={DcredPage} exact />
-            <Route path="/barfights" component={Barfight} exact />
-            <Route path="/claim" component={ClaimPage} exact />
-          </Switch>
+          <WalletContextProvider>
+            <Switch>
+              <Route path="/" component={Degen} exact />
+              <Route path="/dcred" component={DcredPage} exact />
+              <Route path="/barfights" component={Barfight} exact />
+              <Route path="/claim" component={ClaimPage} exact />
+            </Switch>
+          </WalletContextProvider>
         </Router>
         <NotificationContainer />
       </div>
