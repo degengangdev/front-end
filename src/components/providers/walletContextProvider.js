@@ -4,7 +4,7 @@ export const WalletContext = createContext();
 
 export const WalletContextProvider = ({ children }) => {
 
-  const [walletDetails, setWalletDetails] = useState({ walletId: "", walletIdString: "", numClaimablePixelDegens: 0, claimablePixelDegens: "", claimPixelDegensMessage: "" });
+  const [walletDetails, setWalletDetails] = useState({ walletId: "", walletIdString: "", numClaimablePixelDegens: 0, claimablePixelDegens: "", claimPixelDegensMessage: "", showInventoryButton: false });
 
   return (
     <WalletContext.Provider value={[walletDetails, setWalletDetails]}>
