@@ -1,10 +1,9 @@
 import { Link } from '@imtbl/imx-sdk';
 import { useState, useContext } from 'react';
 import axios from "axios";
-import { linkAddress, baseURL, bypassCheckApi, bypassClaimApi } from './imxConfig'
+import { linkAddress, baseURL, bypassCheckApi, bypassClaimApi, bypassConnect, bypassDisconnect } from './imxConfig'
 import Button from "../common/button";
-import CountDownTimer from '../common/countDown'
-import { WalletContext } from "../providers/walletContextProvider";
+import { WalletContext, WalletContextProvider } from "../providers/walletContextProvider";
 
 axios.defaults.baseURL = baseURL;
 
@@ -13,41 +12,54 @@ const ImxClaimButton = (props) => {
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState("")
   const [showInventory, setshowInventory] = useState(false)
-  const [claimsArePublic, setClaimsArePublic] = useState(false)
-  //Used to display any unexpected error messages
   const [errorMessage, setErrorMessage] = useState("");
 
   const [walletDetails, setWalletDetails] = useContext(WalletContext);
 
-  const activationDate = new Date("2021-11-26T17:00Z");
-
   const updateWallet = (walletId) => {
-    var walletString = "";
     //Store the wallet details in the wallet context
-    setWalletDetails(prevState => ({
-      ...prevState,
-      walletId: walletId,
-      walletIdString: walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5)
-    }));
+    setWalletDetails({ walletId: walletId, walletIdString: walletId.substr(0, 5) + " ... " + walletId.substr(walletId.length - 5) });
     if (walletId.length > 10) {
       //Check if we can make a claim
       checkValidClaim(walletId);
     }
     else {
-      setWalletDetails(prevState => ({
-        ...prevState,
-        numClaimablePixelDegens: 0,
-        claimablePixelDegens: "",
-        claimPixelDegensMessage: ""
-      }));
+      clearWallet();
     }
+  }
+
+  const clearWallet = () => {
+    setWalletDetails(prevState => ({ walletId: "", walletIdString: "", numClaimablePixelDegens: 0, claimablePixelDegens: "", claimPixelDegensMessage: "" }));
+  }
+
+  const clearPixelDegenClaimStatus = (claimPixelDegensMessage) => {
+    setWalletDetails(prevState => ({
+      ...prevState,
+      numClaimablePixelDegens: 0,
+      claimablePixelDegens: "",
+      claimPixelDegensMessage: claimPixelDegensMessage
+    }));
+  }
+
+  const setPixelDegenClaimStatus = (numClaimablePixelDegens, claimablePixelDegens, claimPixelDegensMessage) => {
+    setWalletDetails(prevState => ({
+      ...prevState,
+      numClaimablePixelDegens: numClaimablePixelDegens,
+      claimablePixelDegens: claimablePixelDegens,
+      claimPixelDegensMessage: claimPixelDegensMessage
+    }));
   }
 
   const setupAndLogin = async () => {
     try {
       setErrorMessage("");
-      const { address } = await link.setup({});
-      updateWallet(address)
+      if (bypassConnect) {
+        updateWallet("0xTESTTESTTESTTESTTESTTESTxf")
+      }
+      else {
+        const { address } = await link.setup({});
+        updateWallet(address)
+      }
     }
     catch (err) {
       if (err.message != "Link Window Closed")
@@ -58,7 +70,7 @@ const ImxClaimButton = (props) => {
   const logout = () => {
     try {
       setErrorMessage("");
-      updateWallet("")
+      clearWallet();
     }
     catch (err) {
       if (err.message != "Link Window Closed")
@@ -72,22 +84,20 @@ const ImxClaimButton = (props) => {
       setLoading(true)
       setshowInventory(false);
 
-      setWalletDetails(prevState => ({
-        ...prevState,
-        numClaimablePixelDegens: 0,
-        claimablePixelDegens: "",
-        claimPixelDegensMessage: "Checking eligibility ..."
-      }));
+      clearPixelDegenClaimStatus("Checking eligibility ...");
 
       if (bypassCheckApi) {
-        setWalletDetails(prevState => ({
-          ...prevState,
-          numClaimablePixelDegens: 0,
-          claimablePixelDegens: "",
-          claimPixelDegensMessage: "Test airdropped already"
-        }));
+
+        //Already claimed
+        //setPixelDegenClaimStatus(0, "", "Test airdropped already");
+        //setshowInventory(true);
+        //setLoading(false);
+
+        //Eligable to claim
+        setPixelDegenClaimStatus(2, "1111, 2222", "TEST TEST Claim your pixel degens");
         setshowInventory(true);
         setLoading(false);
+
         return;
       }
 
@@ -97,12 +107,7 @@ const ImxClaimButton = (props) => {
             if (res.data.message.includes("airdropped already")) {
               setshowInventory(true);
             }
-            setWalletDetails(prevState => ({
-              ...prevState,
-              numClaimablePixelDegens: 0,
-              claimablePixelDegens: "",
-              claimPixelDegensMessage: res.data.message
-            }));
+            setPixelDegenClaimStatus(0, "", res.data.message);
             setLoading(false);
           }
           else if (res.data.tokens != null && res.data.tokens.length > 0) {
@@ -111,12 +116,7 @@ const ImxClaimButton = (props) => {
         })
         .catch(err => {
           setLoading(false);
-          setWalletDetails(prevState => ({
-            ...prevState,
-            numClaimablePixelDegens: 0,
-            claimablePixelDegens: "",
-            claimPixelDegensMessage: err.toString()
-          }));
+          setPixelDegenClaimStatus(0, "", err.toString());
         })
     }
     catch (err) {
@@ -128,12 +128,7 @@ const ImxClaimButton = (props) => {
   const onClaimAllowed = (tokenArray) => {
     var claimableTokens = tokenArray.length;
     var availTokens = tokenArray.join(", ");
-    setWalletDetails(prevState => ({
-      ...prevState,
-      canClaimPixelDegens: claimableTokens,
-      claimablePixelDegens: availTokens,
-      claimPixelDegensMessage: ""
-    }));
+    setPixelDegenClaimStatus(claimableTokens, availTokens, "");
     setLoading(false);
   }
 
@@ -144,25 +139,21 @@ const ImxClaimButton = (props) => {
       setshowInventory(false);
 
       if (bypassClaimApi) {
-        setWalletDetails(prevState => ({
-          ...prevState,
-          canClaimPixelDegens: 0,
-          claimablePixelDegens: "",
-          claimPixelDegensMessage: "Test error message"
-        }));
-        setLoading(false);
+
+        //Error
+        //setPixelDegenClaimStatus(0, "", "TESTTESTTEST error message");
+        //setLoading(false);
+
+        //Claim Success
+        onClaimSuccessful();
+
         return;
       }
 
       axios.get('/transactions/claim/' + walletDetails.walletId)
         .then((res) => {
           if (res.data.status != null && res.data.status == "Error") {
-            setWalletDetails(prevState => ({
-              ...prevState,
-              canClaimPixelDegens: 0,
-              claimablePixelDegens: "",
-              claimPixelDegensMessage: res.data.message
-            }));
+            setPixelDegenClaimStatus(0, "", res.data.message);
             setLoading(false);
           }
           else if (res.data.result != null && res.data.result.results != null) {
@@ -172,13 +163,7 @@ const ImxClaimButton = (props) => {
         })
         .catch(err => {
           setLoading(false);
-          setWalletDetails(prevState => ({
-            ...prevState,
-            canClaimPixelDegens: 0,
-            claimablePixelDegens: "",
-            claimPixelDegensMessage: err.toString()
-          }));
-
+          setPixelDegenClaimStatus(0, "", err.toString());
         })
     }
     catch (err) {
@@ -188,13 +173,7 @@ const ImxClaimButton = (props) => {
   }
 
   const onClaimSuccessful = (walletString) => {
-    setWalletDetails(prevState => ({
-      ...prevState,
-      canClaimPixelDegens: 0,
-      claimablePixelDegens: "",
-      claimPixelDegensMessage: "Congratulations!"
-    }));
-
+    setPixelDegenClaimStatus(0, "", "Congratulations!");
     setshowInventory(true);
     setLoading(false);
   }
@@ -206,7 +185,7 @@ const ImxClaimButton = (props) => {
           walletDetails.numClaimablePixelDegens > 0 ?
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">
               <div className="col-span-1 justify-center">
-                <Button tailwind="w-56" title="Disconnect" onClickhandler={logout}></Button>
+                <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
               </div>
               <div className="col-span-1 justify-center">
                 <div className="mt-4 md:mt-0">
@@ -219,7 +198,7 @@ const ImxClaimButton = (props) => {
             showInventory ?
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8">
                 <div className="col-span-1 justify-center">
-                  <Button tailwind="w-56" title="Disconnect" onClickhandler={logout}></Button>
+                  <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
                 </div>
                 <div className="col-span-1 justify-center">
                   <a href="https://market.x.immutable.com/inventory" target="__blank">
@@ -230,7 +209,7 @@ const ImxClaimButton = (props) => {
               :
               <div className="grid grid-cols-1 gap-y-2 gap-x-8">
                 <div className="col-span-1 justify-center">
-                  <Button tailwind="w-56" title="Disconnect" onClickhandler={logout}></Button>
+                  <Button tailwind="w-44" title="Disconnect" onClickhandler={logout}></Button>
                 </div>
               </div>
           :
