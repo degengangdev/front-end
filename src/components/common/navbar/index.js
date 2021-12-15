@@ -200,7 +200,7 @@ function Index({ setmenu, menu }) {
               <Link to="/dcred">$dcred</Link>
             </li>
             <li className="text-white">
-             <Link to="/barfights">bar fights</Link>
+              <Link to="/barfights">bar fights</Link>
             </li>
             <li className="text-white">
               <Link to="/claim">claim</Link>
